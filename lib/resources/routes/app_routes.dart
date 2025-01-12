@@ -12,8 +12,8 @@ class AppRoutes {
         ),
         GetPage(
           name: RoutesName.onboardingScreen,
-          page: () => const OnboardingScreen(),
-          transition: Transition.rightToLeft,
+          page: () => OnboardingScreen(),
+          transition: Transition.zoom,
           transitionDuration: const Duration(milliseconds: 600),
         ),
       ];
