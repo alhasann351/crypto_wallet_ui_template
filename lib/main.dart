@@ -1,8 +1,17 @@
+import 'package:crypto_wallet_ui_template/resources/localization/languages.dart';
+import 'package:crypto_wallet_ui_template/resources/routes/app_routes.dart';
+import 'package:crypto_wallet_ui_template/resources/themes/dark_theme.dart';
+import 'package:crypto_wallet_ui_template/resources/themes/light_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(const MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -11,26 +20,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Crypto Wallet UI Template',
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      //title change korte hobe language dia
-      home: Scaffold(
-        body: Center(child: Text('Home')),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: LightTheme().lightTheme,
+      darkTheme: DarkTheme().darkTheme,
+      themeMode: ThemeMode.system,
+      translations: Languages(),
+      locale: const Locale('bn', 'BD'),
+      fallbackLocale: const Locale('en', 'US'),
+      getPages: AppRoutes.appRoutes(),
     );
   }
 }
