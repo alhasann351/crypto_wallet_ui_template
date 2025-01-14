@@ -19,6 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
+    themeController.loadTheme();
     themeController.themeMode;
     super.initState();
   }

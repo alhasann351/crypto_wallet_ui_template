@@ -1,8 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 
 import '../../../resources/colors/app_colors.dart';
 import '../../../view_models/controllers/theme_controller.dart';
@@ -16,26 +15,24 @@ class TabletSplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
       body: AnimatedSplashScreen(
         splash: Column(
           spacing: 10,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 250,
-              width: 250,
-              child: themeController.isDarkMode.value
-                  ? Lottie.asset('assets/lottie/splash_dark_animation.json')
-                  : Lottie.asset('assets/lottie/splash_light_animation.json'),
+            ZoomIn(
+              animate: true,
+              duration: const Duration(seconds: 2),
+              child: Image.asset(
+                'assets/icons/app_icon.png',
+                height: 120,
+                width: 120,
+              ),
             ),
-            Animate(
-              effects: const [
-                FadeEffect(
-                  duration: Duration(seconds: 3),
-                ),
-              ],
+            ZoomIn(
+              animate: true,
+              duration: const Duration(seconds: 2),
               child: Text(
                 'app_title'.tr,
                 style: TextStyle(
@@ -43,17 +40,17 @@ class TabletSplashScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontFamily: 'amaranth',
                     color: themeController.isDarkMode.value
-                        ? AppColors.splashLightColor
-                        : AppColors.splashDarkColor),
+                        ? AppColors.lightColor
+                        : AppColors.darkColor),
               ),
             ),
           ],
         ),
-        splashIconSize: 350,
+        splashIconSize: 180,
         duration: 4000,
         backgroundColor: themeController.isDarkMode.value
-            ? AppColors.splashDarkColor
-            : AppColors.splashLightColor,
+            ? AppColors.darkColor
+            : AppColors.lightColor,
         nextScreen: OnboardingScreen(),
       ),
     );

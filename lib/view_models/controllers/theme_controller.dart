@@ -9,10 +9,11 @@ class ThemeController extends GetxController {
   @override
   void onInit() {
     loadTheme();
+    themeMode;
     super.onInit();
   }
 
-  Future<void> switchTheme(String value) async {
+  Future<void> switchTheme() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     isDarkMode.value = !isDarkMode.value;
     sharedPreferences.setBool(key, isDarkMode.value);

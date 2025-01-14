@@ -16,7 +16,7 @@ class OnboardingScreen extends StatelessWidget {
         () => Switch(
             value: themeController.isDarkMode.value,
             onChanged: (value) {
-              themeController.switchTheme(value.toString());
+              themeController.switchTheme();
             }),
       ),
     ));
