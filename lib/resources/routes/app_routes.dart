@@ -1,4 +1,5 @@
 import 'package:crypto_wallet_ui_template/resources/routes/routes_name.dart';
+import 'package:crypto_wallet_ui_template/views/home_screen/home_screen.dart';
 import 'package:crypto_wallet_ui_template/views/onboarding_screen/onboarding_screen.dart';
 import 'package:get/get.dart';
 
@@ -12,9 +13,15 @@ class AppRoutes {
         ),
         GetPage(
           name: RoutesName.onboardingScreen,
-          page: () => OnboardingScreen(),
+          page: () => const OnboardingScreen(),
           transition: Transition.zoom,
-          transitionDuration: const Duration(milliseconds: 600),
+          transitionDuration: const Duration(milliseconds: 800),
+        ),
+        GetPage(
+          name: RoutesName.homeScreen,
+          page: () => const HomeScreen(),
+          transition: Transition.zoom,
+          transitionDuration: const Duration(milliseconds: 800),
         ),
       ];
 }

@@ -1,3 +1,4 @@
+import 'package:crypto_wallet_ui_template/page_scroll_behavior.dart';
 import 'package:crypto_wallet_ui_template/resources/localization/languages.dart';
 import 'package:crypto_wallet_ui_template/resources/routes/app_routes.dart';
 import 'package:crypto_wallet_ui_template/resources/themes/dark_theme.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
     return Obx(
       () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        scrollBehavior: PageScrollBehavior(),
         theme: LightTheme().lightTheme,
         darkTheme: DarkTheme().darkTheme,
         themeMode: themeController.themeMode,
