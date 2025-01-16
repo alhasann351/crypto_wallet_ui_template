@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 class LightTheme {
   final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    scaffoldBackgroundColor: AppColors.whiteColor,
-    iconTheme: const IconThemeData(color: AppColors.blackColor),
-    //appBarTheme: const AppBarTheme(backgroundColor: AppColors.lightColor),
-    //drawerTheme: const DrawerThemeData(backgroundColor: AppColors.lightColor),
+    scaffoldBackgroundColor: AppColors.lightColor,
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(foregroundColor: AppColors.blackColor),
+    ),
+    appBarTheme: const AppBarTheme(backgroundColor: AppColors.lightColor),
   );
 }

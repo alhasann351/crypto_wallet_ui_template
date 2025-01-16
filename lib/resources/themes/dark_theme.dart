@@ -5,8 +5,9 @@ class DarkTheme {
   final ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColors.darkColor,
-    iconTheme: const IconThemeData(color: AppColors.whiteColor),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(foregroundColor: AppColors.whiteColor),
+    ),
     appBarTheme: const AppBarTheme(backgroundColor: AppColors.darkColor),
-    //drawerTheme: const DrawerThemeData(backgroundColor: AppColors.lightColor),
   );
 }

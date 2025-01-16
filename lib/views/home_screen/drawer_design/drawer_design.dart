@@ -14,8 +14,8 @@ class DrawerDesign extends StatelessWidget {
     return Container(
       color: themeController.isDarkMode.value
           ? AppColors.darkColor
-          : Colors.greenAccent.withValues(alpha: 0.3),
-      child: Column(
+          : AppColors.lightColor,
+      child: const Column(
         children: [Text('data'), Text('data'), Text('data')],
       ),
     );

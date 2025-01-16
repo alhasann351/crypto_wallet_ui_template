@@ -9,17 +9,21 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fontSize = MediaQuery.of(context).size.width * 0.025;
     final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
-    final isDesktop = ResponsiveWidget.isDesktop(context);
 
     return Scaffold(
       drawer: isMobile
-          ? const Drawer(
-              child: DrawerDesign(),
+          ? Padding(
+              padding: const EdgeInsets.all(10),
+              child: SafeArea(
+                child: Drawer(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  child: const DrawerDesign(),
+                ),
+              ),
             )
-          : null,
+          : const SizedBox(),
       body: ResponsiveWidget(
         mobile: mobile(),
         tablet: tablet(),
@@ -28,32 +32,35 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget mobile() => Column(
+  Widget mobile() => const Column(
         children: [
           HeaderDesign(),
         ],
       );
-  Widget tablet() => Row(
+  Widget tablet() => const Row(
         children: [
           Expanded(flex: 2, child: DrawerDesign()),
           Expanded(
-              flex: 5,
-              child: Column(
-                children: [
-                  HeaderDesign(),
-                  SizedBox(
-                    height: 100,
-                    width: 100,
-                    child: Card(
-                      color: Colors.white,
-                    ),
-                  ),
-                  Card(
-                    color: Colors.white,
-                  ),
-                ],
-              )),
+            flex: 5,
+            child: Column(
+              children: [
+                HeaderDesign(),
+              ],
+            ),
+          ),
         ],
       );
-  Widget desktop() => SizedBox();
+  Widget desktop() => const Row(
+        children: [
+          Expanded(child: DrawerDesign()),
+          Expanded(
+            flex: 4,
+            child: Column(
+              children: [
+                HeaderDesign(),
+              ],
+            ),
+          ),
+        ],
+      );
 }

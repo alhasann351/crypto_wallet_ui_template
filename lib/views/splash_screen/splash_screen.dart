@@ -3,7 +3,6 @@ import 'package:crypto_wallet_ui_template/views/splash_screen/widgets/splash_scr
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../view_models/controllers/onboarding_page_controller.dart';
 import '../../view_models/controllers/theme_controller.dart';
 import '../../view_models/services/onboarding_service.dart';
 
@@ -17,7 +16,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   final themeController = Get.put(ThemeController());
   final onboardingService = OnboardingService();
-  final onBoardingPageController = Get.put(OnboardingPageController());
 
   @override
   void initState() {

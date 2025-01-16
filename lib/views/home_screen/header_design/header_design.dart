@@ -14,74 +14,60 @@ class HeaderDesign extends StatelessWidget {
     final isTablet = ResponsiveWidget.isTablet(context);
     final isDesktop = ResponsiveWidget.isDesktop(context);
 
-    /*return SafeArea(
-      child: Padding(
-        padding:
-            const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            AutoSizeText(
-              minFontSize: 22,
-              maxFontSize: 26,
-              'app_title'.tr,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontFamily: 'amaranth',
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-              ),
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: AppBar(
+        centerTitle: true,
+        title: AutoSizeText(
+          minFontSize: 22,
+          maxFontSize: 26,
+          'app_title'.tr,
+          overflow: TextOverflow.ellipsis,
+          style: TextStyle(
+            fontFamily: 'amaranth',
+            fontSize: fontSize,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        leading: isMobile
+            ? IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                icon: const Icon(
+                  Icons.menu_rounded,
+                  size: 26,
+                ))
+            : const SizedBox(),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.qr_code_scanner_rounded,
+              size: isMobile
+                  ? 26
+                  : isTablet
+                      ? 30
+                      : isDesktop
+                          ? 36
+                          : 24,
             ),
-            Row(
-              spacing: 30,
-              children: [
-                Icon(
-                  Icons.qr_code_scanner_rounded,
-                  size: isMobile
-                      ? 24
-                      : isTablet
-                          ? 30
-                          : isDesktop
-                              ? 36
-                              : 24,
-                ),
-                Icon(
-                  Icons.notifications_none_rounded,
-                  size: isMobile
-                      ? 24
-                      : isTablet
-                          ? 30
-                          : isDesktop
-                              ? 36
-                              : 24,
-                ),
-              ],
-            )
-          ],
-        ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.notifications_none_rounded,
+              size: isMobile
+                  ? 26
+                  : isTablet
+                      ? 30
+                      : isDesktop
+                          ? 36
+                          : 24,
+            ),
+          ),
+        ],
       ),
-    );*/
-
-    return AppBar(
-      centerTitle: true,
-      title: AutoSizeText(
-        minFontSize: 22,
-        maxFontSize: 26,
-        'app_title'.tr,
-        overflow: TextOverflow.ellipsis,
-        style: TextStyle(
-          fontFamily: 'amaranth',
-          fontSize: fontSize,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      leading: isMobile
-          ? IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: const Icon(Icons.menu_rounded))
-          : null,
     );
   }
 }
