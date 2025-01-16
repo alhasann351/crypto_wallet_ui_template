@@ -40,7 +40,7 @@ dependencies:
   shared_preferences: ^2.3.5
   animate_do: ^3.3.4
   auto_size_text:
-  smooth_page_indicator: 
+  smooth_page_indicator:
 
 dev_dependencies:
   flutter_test:
