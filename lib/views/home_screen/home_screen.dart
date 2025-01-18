@@ -1,7 +1,8 @@
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import 'drawer_design/drawer_design.dart';
+import '../../view_models/controllers/bottom_navbar_controller.dart';
 import 'header_design/header_design.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,25 +10,21 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
+    final bottomNavbarController = Get.put(BottomNavbarController());
 
-    return Scaffold(
-      drawer: isMobile
-          ? Padding(
-              padding: const EdgeInsets.all(10),
-              child: SafeArea(
-                child: Drawer(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: const DrawerDesign(),
-                ),
-              ),
-            )
-          : const SizedBox(),
-      body: ResponsiveWidget(
-        mobile: mobile(),
-        tablet: tablet(),
-        desktop: desktop(),
+    return PopScope(
+      onPopInvokedWithResult: (bool didPop, Object? result) async {
+        if (bottomNavbarController.currentScreen.value != 0) {
+          bottomNavbarController.currentScreen.value = 0;
+        }
+      },
+      child: Scaffold(
+        //bottomNavigationBar: const BottomNavbar(),
+        body: ResponsiveWidget(
+          mobile: mobile(),
+          tablet: tablet(),
+          desktop: desktop(),
+        ),
       ),
     );
   }
@@ -37,30 +34,14 @@ class HomeScreen extends StatelessWidget {
           HeaderDesign(),
         ],
       );
-  Widget tablet() => const Row(
+  Widget tablet() => const Column(
         children: [
-          Expanded(flex: 2, child: DrawerDesign()),
-          Expanded(
-            flex: 5,
-            child: Column(
-              children: [
-                HeaderDesign(),
-              ],
-            ),
-          ),
+          HeaderDesign(),
         ],
       );
-  Widget desktop() => const Row(
+  Widget desktop() => const Column(
         children: [
-          Expanded(child: DrawerDesign()),
-          Expanded(
-            flex: 4,
-            child: Column(
-              children: [
-                HeaderDesign(),
-              ],
-            ),
-          ),
+          HeaderDesign(),
         ],
       );
 }

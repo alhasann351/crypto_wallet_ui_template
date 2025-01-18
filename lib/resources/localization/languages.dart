@@ -22,6 +22,12 @@ class Languages extends Translations {
           'onboarding_screen_skip_text': 'Skip',
           'onboarding_screen_next_text': 'Next',
           'onboarding_screen_finish_text': 'Finish',
+
+          //bottom navbar
+          'nav_home': 'Home',
+          'nav_swap': 'Swap',
+          'nav_tools': 'Tools',
+          'nav_menu': 'Menu',
         },
         'bn_BD': {
           'app_title': 'ক্রিপ্টো ওয়ালেট',
@@ -42,6 +48,12 @@ class Languages extends Translations {
           'onboarding_screen_skip_text': 'এড়িয়ে যান',
           'onboarding_screen_next_text': 'পরবর্তী',
           'onboarding_screen_finish_text': 'শেষ করুন',
+
+          //bottom navbar
+          'nav_home': 'হোম',
+          'nav_swap': 'সোয়াপ',
+          'nav_tools': 'টুল',
+          'nav_menu': 'মেনু',
         },
         'hi_IN': {
           'app_title': 'क्रिप्टो वॉलेट',
@@ -62,6 +74,12 @@ class Languages extends Translations {
           'onboarding_screen_skip_text': 'छोडना',
           'onboarding_screen_next_text': 'अगला',
           'onboarding_screen_finish_text': 'खत्म करना',
+
+          //bottom navbar
+          'nav_home': 'होम',
+          'nav_swap': 'स्वैप',
+          'nav_tools': 'टूल्स',
+          'nav_menu': 'मेनू',
         },
       };
 }
