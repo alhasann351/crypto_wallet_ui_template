@@ -28,6 +28,9 @@ class Languages extends Translations {
           'nav_swap': 'Swap',
           'nav_tools': 'Tools',
           'nav_menu': 'Menu',
+
+          //swap screen
+          'swap_screen_title': 'Swap',
         },
         'bn_BD': {
           'app_title': 'ক্রিপ্টো ওয়ালেট',
@@ -54,6 +57,9 @@ class Languages extends Translations {
           'nav_swap': 'সোয়াপ',
           'nav_tools': 'টুল',
           'nav_menu': 'মেনু',
+
+          //swap screen
+          'swap_screen_title': 'সোয়াপ',
         },
         'hi_IN': {
           'app_title': 'क्रिप्टो वॉलेट',
@@ -80,6 +86,9 @@ class Languages extends Translations {
           'nav_swap': 'स्वैप',
           'nav_tools': 'टूल्स',
           'nav_menu': 'मेनू',
+
+          //swap screen
+          'swap_screen_title': 'स्वैप',
         },
       };
 }
