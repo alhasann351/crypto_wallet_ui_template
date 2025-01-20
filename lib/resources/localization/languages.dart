@@ -31,6 +31,12 @@ class Languages extends Translations {
 
           //swap screen
           'swap_screen_title': 'Swap',
+
+          //tools screen
+          'tools_screen_title': 'Tools',
+
+          //menu screen
+          'menu_screen_title': 'Menu',
         },
         'bn_BD': {
           'app_title': 'ক্রিপ্টো ওয়ালেট',
@@ -55,11 +61,17 @@ class Languages extends Translations {
           //bottom navbar
           'nav_home': 'হোম',
           'nav_swap': 'সোয়াপ',
-          'nav_tools': 'টুল',
+          'nav_tools': 'টুলস',
           'nav_menu': 'মেনু',
 
           //swap screen
           'swap_screen_title': 'সোয়াপ',
+
+          //tools screen
+          'tools_screen_title': 'টুলস',
+
+          //menu screen
+          'menu_screen_title': 'মেনু',
         },
         'hi_IN': {
           'app_title': 'क्रिप्टो वॉलेट',
@@ -89,6 +101,12 @@ class Languages extends Translations {
 
           //swap screen
           'swap_screen_title': 'स्वैप',
+
+          //tools screen
+          'tools_screen_title': 'टूल्स',
+
+          //menu screen
+          'menu_screen_title': 'मेनू',
         },
       };
 }

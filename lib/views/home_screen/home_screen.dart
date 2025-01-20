@@ -1,5 +1,7 @@
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
+import 'package:crypto_wallet_ui_template/views/menu_screen/menu_screen.dart';
 import 'package:crypto_wallet_ui_template/views/swap_screen/swap_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/tools_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,9 +33,17 @@ class HomeScreen extends StatelessWidget {
                 desktop: desktopSwapScreen(),
               );
             case 2:
-              return const Center(child: Text('Tools Screen'));
+              return ResponsiveWidget(
+                mobile: mobileToolsScreen(),
+                tablet: tabletToolsScreen(),
+                desktop: desktopToolsScreen(),
+              );
             case 3:
-              return const Center(child: Text('Menu Screen'));
+              return ResponsiveWidget(
+                mobile: mobileMenuScreen(),
+                tablet: tabletMenuScreen(),
+                desktop: desktopMenuScreen(),
+              );
             default:
               ResponsiveWidget(
                 mobile: mobileHomeScreen(),
@@ -79,6 +89,40 @@ class HomeScreen extends StatelessWidget {
   Widget desktopSwapScreen() => const Column(
         children: [
           SwapScreen(),
+        ],
+      );
+
+  //tools screen items
+  Widget mobileToolsScreen() => const Column(
+        children: [
+          ToolsScreen(),
+        ],
+      );
+  Widget tabletToolsScreen() => const Column(
+        children: [
+          ToolsScreen(),
+        ],
+      );
+  Widget desktopToolsScreen() => const Column(
+        children: [
+          ToolsScreen(),
+        ],
+      );
+
+  //menu screen items
+  Widget mobileMenuScreen() => const Column(
+        children: [
+          MenuScreen(),
+        ],
+      );
+  Widget tabletMenuScreen() => const Column(
+        children: [
+          MenuScreen(),
+        ],
+      );
+  Widget desktopMenuScreen() => const Column(
+        children: [
+          MenuScreen(),
         ],
       );
 }
