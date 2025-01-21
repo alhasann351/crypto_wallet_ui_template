@@ -34,6 +34,12 @@ class Languages extends Translations {
 
           //tools screen
           'tools_screen_title': 'Tools',
+          'popular': 'Popular tools',
+          'buy_sell': 'Buy/Sell',
+          'buy_sell_des': 'Buy or sell crypto assets and cashout cryptos',
+          'crypto_card': 'Crypto card',
+          'crypto_card_des': 'Spend cryptos with a virtual card',
+          'more': 'More tools',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -69,6 +75,13 @@ class Languages extends Translations {
 
           //tools screen
           'tools_screen_title': 'টুলস',
+          'popular': 'পোপুলার টুলস',
+          'buy_sell': 'ক্রয়/বিক্রয়',
+          'buy_sell_des':
+              'ক্রিপ্টো সম্পদ কিনুন বা বিক্রি করুন এবং ক্রিপ্টো ক্যাশআউট',
+          'crypto_card': 'ক্রিপ্টো কার্ড',
+          'crypto_card_des': 'ভার্চুয়াল কার্ড দিয়ে ক্রিপ্টো খরচ করুন',
+          'more': 'আরও টুলস',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -104,6 +117,13 @@ class Languages extends Translations {
 
           //tools screen
           'tools_screen_title': 'टूल्स',
+          'popular': 'पोपुलर टूल्स',
+          'buy_sell': 'खरीदें/बेचें',
+          'buy_sell_des':
+              'क्रिप्टो परिसंपत्तियां खरीदें या बेचें और क्रिप्टो से पैसे निकालें',
+          'crypto_card': 'क्रिप्टो कार्ड',
+          'crypto_card_des': 'वर्चुअल कार्ड से क्रिप्टो खर्च करें',
+          'more': 'अधिक टूल्स',
 
           //menu screen
           'menu_screen_title': 'मेनू',

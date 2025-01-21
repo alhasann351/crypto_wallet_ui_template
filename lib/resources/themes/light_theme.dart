@@ -8,6 +8,9 @@ class LightTheme {
     iconButtonTheme: IconButtonThemeData(
       style: IconButton.styleFrom(foregroundColor: AppColors.blackColor),
     ),
-    appBarTheme: const AppBarTheme(backgroundColor: AppColors.lightColor),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.lightColor,
+        surfaceTintColor: AppColors.lightColor),
+    cardTheme: const CardTheme(color: AppColors.whiteColor),
   );
 }

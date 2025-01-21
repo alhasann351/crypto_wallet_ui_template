@@ -1,7 +1,9 @@
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
 import 'package:crypto_wallet_ui_template/views/menu_screen/menu_screen.dart';
 import 'package:crypto_wallet_ui_template/views/swap_screen/swap_screen.dart';
-import 'package:crypto_wallet_ui_template/views/tools_screen/tools_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/tools_screen_appbar.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/widgets/more_tools.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/widgets/popular_tools.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -93,20 +95,31 @@ class HomeScreen extends StatelessWidget {
       );
 
   //tools screen items
-  Widget mobileToolsScreen() => const Column(
-        children: [
-          ToolsScreen(),
-        ],
+  Widget mobileToolsScreen() => SafeArea(
+        child: Column(
+          children: [
+            const ToolsScreenAppbar(),
+            Expanded(
+              child: ListView(
+                children: [
+                  const PopularTools(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const MoreTools(),
+                ],
+              ),
+            ),
+          ],
+        ),
       );
   Widget tabletToolsScreen() => const Column(
         children: [
-          ToolsScreen(),
+          ToolsScreenAppbar(),
         ],
       );
   Widget desktopToolsScreen() => const Column(
-        children: [
-          ToolsScreen(),
-        ],
+        children: [],
       );
 
   //menu screen items

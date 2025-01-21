@@ -8,6 +8,11 @@ class DarkTheme {
     iconButtonTheme: IconButtonThemeData(
       style: IconButton.styleFrom(foregroundColor: AppColors.whiteColor),
     ),
-    appBarTheme: const AppBarTheme(backgroundColor: AppColors.darkColor),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.darkColor,
+        surfaceTintColor: AppColors.darkColor),
+    cardTheme: const CardTheme(
+      color: AppColors.brightCornflowerBlueColor,
+    ),
   );
 }
