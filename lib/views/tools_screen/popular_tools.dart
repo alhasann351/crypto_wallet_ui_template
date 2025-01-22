@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:crypto_wallet_ui_template/resources/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,6 +36,8 @@ class PopularTools extends StatelessWidget {
                   height: 150,
                   child: Card(
                     elevation: 10,
+                    color: AppColors.cardColor1,
+                    shadowColor: AppColors.cardColor1,
                     child: Padding(
                       padding: const EdgeInsets.only(
                           top: 10, bottom: 0, left: 10, right: 10),
@@ -63,6 +66,7 @@ class PopularTools extends StatelessWidget {
                                 fontSize: fontSize,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'amaranth',
+                                color: AppColors.whiteColor,
                               ),
                             ),
                           ),
@@ -77,6 +81,7 @@ class PopularTools extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: fontSize,
                                 fontFamily: 'amaranth',
+                                color: AppColors.whiteColor,
                               ),
                             ),
                           ),
@@ -91,6 +96,8 @@ class PopularTools extends StatelessWidget {
                   height: 150,
                   child: Card(
                     elevation: 10,
+                    color: AppColors.cardColor2,
+                    shadowColor: AppColors.cardColor2,
                     child: Padding(
                       padding: const EdgeInsets.only(
                           top: 10, bottom: 0, left: 10, right: 10),
@@ -119,6 +126,7 @@ class PopularTools extends StatelessWidget {
                                 fontSize: fontSize,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'amaranth',
+                                color: AppColors.whiteColor,
                               ),
                             ),
                           ),
@@ -133,6 +141,7 @@ class PopularTools extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: fontSize,
                                 fontFamily: 'amaranth',
+                                color: AppColors.whiteColor,
                               ),
                             ),
                           ),

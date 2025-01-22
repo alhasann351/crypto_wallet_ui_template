@@ -1,9 +1,9 @@
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
 import 'package:crypto_wallet_ui_template/views/menu_screen/menu_screen.dart';
 import 'package:crypto_wallet_ui_template/views/swap_screen/swap_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/more_tools.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/popular_tools.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/tools_screen_appbar.dart';
-import 'package:crypto_wallet_ui_template/views/tools_screen/widgets/more_tools.dart';
-import 'package:crypto_wallet_ui_template/views/tools_screen/widgets/popular_tools.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

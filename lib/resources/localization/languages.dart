@@ -40,6 +40,29 @@ class Languages extends Translations {
           'crypto_card': 'Crypto card',
           'crypto_card_des': 'Spend cryptos with a virtual card',
           'more': 'More tools',
+          'simple_earn_title': 'Easy Earnings',
+          'simple_earn_des': 'Grow your assets and earn crypto effortlessly',
+          'gift_cards_title': 'Gift Cards',
+          'gift_card_des':
+              'Access 5,000+ products and services with gift cards',
+          'marketplace_title': 'Marketplace',
+          'marketplace_des': 'Trade and explore upcoming tokens',
+          'loan_title': 'Loans',
+          'loan_des': 'Leverage assets as collateral for instant loans',
+          'mobile_top_up_title': 'Mobile Recharge',
+          'mobile_top_up_des': 'Recharge prepaid numbers in over 40 countries',
+          'bulk_payment_title': 'Batch Payments',
+          'bulk_payment_des': 'Streamline and send crypto payouts in bulk',
+          'tip_box_title': 'Tip Jar',
+          'tip_box_des': 'Set up a crypto tip jar to accept tips',
+          'request_title': 'Payment Request',
+          'request_des': 'Generate a link or QR code to request payments',
+          'payment_button_title': 'Payment Button',
+          'payment_button_des': 'Embed a button to collect payments seamlessly',
+          'airdrop_arena_title': 'Airdrop Arena',
+          'airdrop_arena_des': 'Organize or join play-to-earn airdrop events',
+          'giveaway_title': 'Crypto Giveaway',
+          'giveaway_des': 'Participate in events to win cryptocurrency rewards',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -82,6 +105,35 @@ class Languages extends Translations {
           'crypto_card': 'ক্রিপ্টো কার্ড',
           'crypto_card_des': 'ভার্চুয়াল কার্ড দিয়ে ক্রিপ্টো খরচ করুন',
           'more': 'আরও টুলস',
+          'simple_earn_title': 'সহজ উপার্জন',
+          'simple_earn_des':
+              'আপনার সম্পদ বৃদ্ধি করুন এবং অনায়াসে ক্রিপ্টো উপার্জন করুন',
+          'gift_cards_title': 'গিফট কার্ড',
+          'gift_card_des':
+              'গিফট কার্ডের মাধ্যমে 5,000+ পণ্য এবং পরিষেবা অ্যাক্সেস করুন',
+          'marketplace_title': 'মার্কেটপ্লেস',
+          'marketplace_des': 'আসন্ন টোকেনগুলি বাণিজ্য করুন এবং অন্বেষণ করুন',
+          'loan_title': 'ঋণ',
+          'loan_des': 'তাৎক্ষণিক ঋণের জন্য জামানত হিসেবে সম্পদের লিভারেজ',
+          'mobile_top_up_title': 'মোবাইল রিচার্জ',
+          'mobile_top_up_des':
+              '40 টিরও বেশি দেশে প্রিপেইড নম্বরগুলি রিচার্জ করুন',
+          'bulk_payment_title': 'ব্যাচ পেমেন্ট',
+          'bulk_payment_des':
+              'বাল্কে ক্রিপ্টো পেমেন্ট স্ট্রিমলাইন করুন এবং পাঠান',
+          'tip_box_title': 'টিপ জার',
+          'tip_box_des': 'টিপস গ্রহণের জন্য একটি ক্রিপ্টো টিপ জার সেট আপ করুন',
+          'request_title': 'পেমেন্ট রিকোয়েস্ট',
+          'request_des':
+              'পেমেন্টের অনুরোধ করার জন্য একটি লিঙ্ক বা QR কোড তৈরি করুন',
+          'payment_button_title': 'পেমেন্ট বোতাম',
+          'payment_button_des':
+              'নিরবিচ্ছিন্নভাবে পেমেন্ট সংগ্রহ করার জন্য একটি বোতাম এম্বেড করুন',
+          'airdrop_arena_title': 'এয়ারড্রপ এরিনা',
+          'airdrop_arena_des':
+              'প্লে-টু-আর্ন এয়ারড্রপ ইভেন্টগুলি সংগঠিত করুন বা যোগদান করুন',
+          'giveaway_title': 'ক্রিপ্টো গিভওয়ে',
+          'giveaway_des': 'ক্রিপ্টো পুরষ্কার জিততে ইভেন্টগুলিতে অংশগ্রহণ করুন',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -124,6 +176,39 @@ class Languages extends Translations {
           'crypto_card': 'क्रिप्टो कार्ड',
           'crypto_card_des': 'वर्चुअल कार्ड से क्रिप्टो खर्च करें',
           'more': 'अधिक टूल्स',
+          'simple_earn_title': 'आसान कमाई',
+          'simple_earn_des':
+              'अपनी संपत्ति बढ़ाएँ और बिना किसी परेशानी के क्रिप्टो कमाएँ',
+          'gift_cards_title': 'गिफ्ट कार्ड',
+          'gift_card_des':
+              'गिफ्ट कार्ड के साथ 5,000+ उत्पादों और सेवाओं तक पहुँचें',
+          'marketplace_title': 'मार्केटप्लेस',
+          'marketplace_des':
+              'आने वाले टोकन का व्यापार करें और उन्हें एक्सप्लोर करें',
+          'loan_title': 'ऋण',
+          'loan_des':
+              'तत्काल ऋण के लिए संपार्श्विक के रूप में संपत्ति का लाभ उठाएँ',
+          'mobile_top_up_title': 'मोबाइल रिचार्ज',
+          'mobile_top_up_des':
+              '40 से ज़्यादा देशों में प्रीपेड नंबर रिचार्ज करें',
+          'bulk_payment_title': 'बैच भुगतान',
+          'bulk_payment_des':
+              'बल्क में क्रिप्टो भुगतान को सुव्यवस्थित करें और भेजें',
+          'tip_box_title': 'टिप जार',
+          'tip_box_des':
+              'टिप्स स्वीकार करने के लिए क्रिप्टो टिप जार सेट अप करें',
+          'request_title': 'भुगतान अनुरोध',
+          'request_des':
+              'भुगतान का अनुरोध करने के लिए एक लिंक या क्यूआर कोड जनरेट करें',
+          'payment_button_title': 'भुगतान बटन',
+          'payment_button_des':
+              'भुगतान को सहजता से एकत्रित करने के लिए एक बटन एम्बेड करें',
+          'airdrop_arena_title': 'एयरड्रॉप एरिना',
+          'airdrop_arena_des':
+              'प्ले-टू-अर्न एयरड्रॉप इवेंट आयोजित करें या उसमें शामिल हों',
+          'giveaway_title': 'क्रिप्टो गिवअवे',
+          'giveaway_des':
+              'क्रिप्टोकरेंसी पुरस्कार जीतने के लिए इवेंट में भाग लें',
 
           //menu screen
           'menu_screen_title': 'मेनू',
