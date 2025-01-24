@@ -6,6 +6,9 @@ class Languages extends Translations {
         'en_US': {
           'app_title': 'Crypto Wallet',
 
+          'buy': 'Buy',
+          'sell': 'Sell',
+
           //onboarding screen
           'onboarding_page_one_title': 'Welcome to Crypto Wallet',
           'onboarding_page_one_description':
@@ -69,6 +72,9 @@ class Languages extends Translations {
         },
         'bn_BD': {
           'app_title': 'ক্রিপ্টো ওয়ালেট',
+
+          'buy': 'ক্রয়',
+          'sell': 'বিক্রয়',
 
           //onboarding screen
           'onboarding_page_one_title': 'ক্রিপ্টো ওয়ালেটে স্বাগতম',
@@ -140,6 +146,9 @@ class Languages extends Translations {
         },
         'hi_IN': {
           'app_title': 'क्रिप्टो वॉलेट',
+
+          'buy': 'क्रय',
+          'sell': 'बेचें',
 
           //onboarding screen
           'onboarding_page_one_title': 'क्रिप्टो वॉलेट में आपका स्वागत है',

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,87 +53,91 @@ class MoreTools extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.all(10),
-      child: Column(
-        spacing: 10,
-        children: [
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: AutoSizeText(
-              'more'.tr,
-              minFontSize: 18,
-              maxFontSize: 22,
-              style: TextStyle(
-                fontSize: fontSize,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'amaranth',
+      child: ElasticInRight(
+        animate: true,
+        duration: const Duration(seconds: 4),
+        child: Column(
+          spacing: 10,
+          children: [
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: AutoSizeText(
+                'more'.tr,
+                minFontSize: 18,
+                maxFontSize: 22,
+                style: TextStyle(
+                  fontSize: fontSize,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'amaranth',
+                ),
               ),
             ),
-          ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: toolsTitle.length,
-            itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              child: Expanded(
-                child: Card(
-                  color: cardColors[index],
-                  shadowColor: cardColors[index],
-                  elevation: 10,
-                  clipBehavior: Clip.antiAlias,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Positioned(
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        left: 0,
-                        child: AutoSizeText(
-                          toolsTitle[index],
-                          minFontSize: 16,
-                          maxFontSize: 20,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: fontSize,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'amaranth',
-                            color: AppColors.whiteColor,
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: toolsTitle.length,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: SizedBox(
+                  height: 80,
+                  child: Card(
+                    color: cardColors[index],
+                    shadowColor: cardColors[index],
+                    elevation: 10,
+                    clipBehavior: Clip.antiAlias,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 25),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                AutoSizeText(
+                                  toolsTitle[index],
+                                  minFontSize: 16,
+                                  maxFontSize: 20,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: fontSize,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'amaranth',
+                                    color: AppColors.whiteColor,
+                                  ),
+                                ),
+                                AutoSizeText(
+                                  toolsDes[index],
+                                  minFontSize: 14,
+                                  maxFontSize: 18,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: fontSize,
+                                    fontFamily: 'amaranth',
+                                    color: AppColors.whiteColor,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 15,
-                        right: 0,
-                        bottom: 0,
-                        left: 0,
-                        child: AutoSizeText(
-                          toolsDes[index],
-                          minFontSize: 14,
-                          maxFontSize: 18,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: fontSize,
-                            fontFamily: 'amaranth',
-                            color: AppColors.whiteColor,
+                          const Align(
+                            alignment: Alignment.centerRight,
+                            child: Icon(
+                              Icons.arrow_forward_ios_outlined,
+                              size: 20,
+                              color: AppColors.whiteColor,
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 10),
-                        child: Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          size: 25,
-                          color: AppColors.whiteColor,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
