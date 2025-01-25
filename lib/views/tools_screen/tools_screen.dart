@@ -1,17 +1,26 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../resources/colors/app_colors.dart';
+import '../../../resources/colors/app_colors.dart';
+import '../../../view_models/controllers/tools_controllers.dart';
 
-class MoreTools extends StatelessWidget {
-  const MoreTools({super.key});
+class ToolsScreen extends StatefulWidget {
+  const ToolsScreen({super.key});
+
+  @override
+  State<ToolsScreen> createState() => _ToolsScreenState();
+}
+
+class _ToolsScreenState extends State<ToolsScreen> {
+  final toolsController = Get.put(ToolsController());
 
   @override
   Widget build(BuildContext context) {
     final fontSize = MediaQuery.of(context).size.width * 0.025;
     final toolsTitle = [
+      'buy_sell'.tr,
+      'crypto_card'.tr,
       'simple_earn_title'.tr,
       'gift_cards_title'.tr,
       'marketplace_title'.tr,
@@ -25,6 +34,8 @@ class MoreTools extends StatelessWidget {
       'giveaway_title'.tr,
     ];
     final toolsDes = [
+      'buy_sell_des'.tr,
+      'crypto_card_des'.tr,
       'simple_earn_des'.tr,
       'gift_card_des'.tr,
       'marketplace_des'.tr,
@@ -49,37 +60,40 @@ class MoreTools extends StatelessWidget {
       AppColors.cardColor4,
       AppColors.cardColor5,
       AppColors.cardColor1,
+      AppColors.cardColor2,
+      AppColors.cardColor3,
     ];
-
     return Padding(
       padding: const EdgeInsets.all(10),
-      child: ElasticInRight(
-        animate: true,
-        duration: const Duration(seconds: 4),
-        child: Column(
-          spacing: 10,
-          children: [
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: AutoSizeText(
-                'more'.tr,
-                minFontSize: 18,
-                maxFontSize: 22,
-                style: TextStyle(
-                  fontSize: fontSize,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'amaranth',
-                ),
+      child: Column(
+        spacing: 10,
+        children: [
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: AutoSizeText(
+              'popular'.tr,
+              minFontSize: 18,
+              maxFontSize: 22,
+              style: TextStyle(
+                fontSize: fontSize,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'amaranth',
               ),
             ),
-            ListView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: toolsTitle.length,
-              itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: SizedBox(
-                  height: 80,
+          ),
+          ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: toolsTitle.length,
+            itemBuilder: (context, index) => Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: SizedBox(
+                height: 80,
+                child: GestureDetector(
+                  onTap: () {
+                    toolsController
+                        .selectScreens(toolsController.screens[index]);
+                  },
                   child: Card(
                     color: cardColors[index],
                     shadowColor: cardColors[index],
@@ -98,7 +112,7 @@ class MoreTools extends StatelessWidget {
                                 AutoSizeText(
                                   toolsTitle[index],
                                   minFontSize: 16,
-                                  maxFontSize: 20,
+                                  maxFontSize: 18,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: fontSize,
@@ -110,7 +124,7 @@ class MoreTools extends StatelessWidget {
                                 AutoSizeText(
                                   toolsDes[index],
                                   minFontSize: 14,
-                                  maxFontSize: 18,
+                                  maxFontSize: 16,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: fontSize,
@@ -136,8 +150,8 @@ class MoreTools extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

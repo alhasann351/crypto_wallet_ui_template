@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../resources/colors/app_colors.dart';
-import '../../../../view_models/controllers/buy_sell_toggle_button_controller.dart';
+import '../../../../../../resources/colors/app_colors.dart';
+import '../../../../../../view_models/controllers/buy_sell_toggle_button_controller.dart';
 
 class BuySellToggleButton extends StatelessWidget {
   const BuySellToggleButton({super.key});

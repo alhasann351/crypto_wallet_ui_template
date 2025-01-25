@@ -66,6 +66,7 @@ class Languages extends Translations {
           'airdrop_arena_des': 'Organize or join play-to-earn airdrop events',
           'giveaway_title': 'Crypto Giveaway',
           'giveaway_des': 'Participate in events to win cryptocurrency rewards',
+          'no_selected_tools': 'Please select any tools',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -140,6 +141,7 @@ class Languages extends Translations {
               'প্লে-টু-আর্ন এয়ারড্রপ ইভেন্টগুলি সংগঠিত করুন বা যোগদান করুন',
           'giveaway_title': 'ক্রিপ্টো গিভওয়ে',
           'giveaway_des': 'ক্রিপ্টো পুরষ্কার জিততে ইভেন্টগুলিতে অংশগ্রহণ করুন',
+          'no_selected_tools': 'দয়া করে যেকোনো টুল নির্বাচন করুন',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -218,6 +220,7 @@ class Languages extends Translations {
           'giveaway_title': 'क्रिप्टो गिवअवे',
           'giveaway_des':
               'क्रिप्टोकरेंसी पुरस्कार जीतने के लिए इवेंट में भाग लें',
+          'no_selected_tools': 'कृपया कोई भी उपकरण चुनें',
 
           //menu screen
           'menu_screen_title': 'मेनू',

@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import '../../../view_models/controllers/theme_controller.dart';
 
-class HeaderDesign extends StatelessWidget {
-  const HeaderDesign({super.key});
+class HomeScreenAppbar extends StatelessWidget {
+  const HomeScreenAppbar({super.key});
 
   @override
   Widget build(BuildContext context) {

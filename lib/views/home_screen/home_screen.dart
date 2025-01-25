@@ -1,23 +1,30 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
+import 'package:crypto_wallet_ui_template/views/home_screen/home_screen_appbar/home_screen_appbar.dart';
 import 'package:crypto_wallet_ui_template/views/menu_screen/menu_screen.dart';
 import 'package:crypto_wallet_ui_template/views/swap_screen/swap_screen.dart';
-import 'package:crypto_wallet_ui_template/views/tools_screen/more_tools.dart';
-import 'package:crypto_wallet_ui_template/views/tools_screen/popular_tools.dart';
-import 'package:crypto_wallet_ui_template/views/tools_screen/tools_screen_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../view_models/controllers/bottom_navbar_controller.dart';
+import '../../view_models/controllers/tools_controllers.dart';
+import '../tools_screen/tools_screen.dart';
+import '../tools_screen/widgets/tools_screen_appbar.dart';
 import 'bottom_navbar/bottom_navbar.dart';
-import 'header_design/header_design.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final bottomNavbarController = Get.put(BottomNavbarController());
+  State<HomeScreen> createState() => _HomeScreenState();
+}
 
+class _HomeScreenState extends State<HomeScreen> {
+  final toolsController = Get.put(ToolsController());
+  final bottomNavbarController = Get.put(BottomNavbarController());
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(
         () {
@@ -63,17 +70,19 @@ class HomeScreen extends StatelessWidget {
   //home screen items
   Widget mobileHomeScreen() => const Column(
         children: [
-          HeaderDesign(),
+          HomeScreenAppbar(),
         ],
       );
+
   Widget tabletHomeScreen() => const Column(
         children: [
-          HeaderDesign(),
+          HomeScreenAppbar(),
         ],
       );
+
   Widget desktopHomeScreen() => const Column(
         children: [
-          HeaderDesign(),
+          HomeScreenAppbar(),
         ],
       );
 
@@ -83,11 +92,13 @@ class HomeScreen extends StatelessWidget {
           SwapScreen(),
         ],
       );
+
   Widget tabletSwapScreen() => const Column(
         children: [
           SwapScreen(),
         ],
       );
+
   Widget desktopSwapScreen() => const Column(
         children: [
           SwapScreen(),
@@ -102,24 +113,143 @@ class HomeScreen extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  const PopularTools(),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const MoreTools(),
+                  const ToolsScreen(),
                 ],
               ),
             ),
           ],
         ),
       );
-  Widget tabletToolsScreen() => const Column(
+
+  Widget tabletToolsScreen() => Row(
         children: [
-          ToolsScreenAppbar(),
+          Expanded(
+            flex: 2,
+            child: ListView(
+              children: [
+                const ToolsScreenAppbar(),
+                const SizedBox(height: 10),
+                const ToolsScreen(),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Obx(
+              () {
+                if (toolsController.selectedScreens.value == null) {
+                  final isTablet = ResponsiveWidget.isTablet(context);
+                  final isDesktop = ResponsiveWidget.isDesktop(context);
+                  final fontSize = MediaQuery.of(context).size.width * 0.025;
+
+                  return Column(
+                    spacing: 10,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/tools_image.webp',
+                        height: isTablet
+                            ? 200
+                            : isDesktop
+                                ? 220
+                                : 0,
+                        width: isTablet
+                            ? 200
+                            : isDesktop
+                                ? 220
+                                : 0,
+                      ),
+                      AutoSizeText(
+                        'no_selected_tools'.tr,
+                        textAlign: TextAlign.center,
+                        minFontSize: 16,
+                        maxFontSize: 20,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: fontSize,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'amaranth',
+                        ),
+                      ),
+                    ],
+                  );
+                }
+
+                final selectedScreens = toolsController.selectedScreens.value!;
+                return selectedScreens;
+              },
+            ),
+          ),
         ],
       );
-  Widget desktopToolsScreen() => const Column(
-        children: [],
+
+  Widget desktopToolsScreen() => Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: ListView(
+              children: [
+                const ToolsScreenAppbar(),
+                const SizedBox(height: 10),
+                const ToolsScreen(),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Obx(
+              () {
+                if (toolsController.selectedScreens.value == null) {
+                  final isTablet = ResponsiveWidget.isTablet(context);
+                  final isDesktop = ResponsiveWidget.isDesktop(context);
+                  final fontSize = MediaQuery.of(context).size.width * 0.025;
+
+                  return Column(
+                    spacing: 10,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/tools_image.webp',
+                        height: isTablet
+                            ? 200
+                            : isDesktop
+                                ? 220
+                                : 0,
+                        width: isTablet
+                            ? 200
+                            : isDesktop
+                                ? 220
+                                : 0,
+                      ),
+                      AutoSizeText(
+                        'no_selected_tools'.tr,
+                        textAlign: TextAlign.center,
+                        minFontSize: 16,
+                        maxFontSize: 20,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: fontSize,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'amaranth',
+                        ),
+                      ),
+                    ],
+                  );
+                }
+
+                final selectedScreens = toolsController.selectedScreens.value!;
+                return selectedScreens;
+              },
+            ),
+          ),
+          Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.red,
+              )),
+        ],
       );
 
   //menu screen items
@@ -128,11 +258,13 @@ class HomeScreen extends StatelessWidget {
           MenuScreen(),
         ],
       );
+
   Widget tabletMenuScreen() => const Column(
         children: [
           MenuScreen(),
         ],
       );
+
   Widget desktopMenuScreen() => const Column(
         children: [
           MenuScreen(),
