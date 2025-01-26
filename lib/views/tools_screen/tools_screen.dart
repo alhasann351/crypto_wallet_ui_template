@@ -1,9 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:crypto_wallet_ui_template/resources/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../resources/colors/app_colors.dart';
 import '../../../view_models/controllers/tools_controllers.dart';
+import '../../responsive_widget.dart';
 
 class ToolsScreen extends StatefulWidget {
   const ToolsScreen({super.key});
@@ -18,6 +20,8 @@ class _ToolsScreenState extends State<ToolsScreen> {
   @override
   Widget build(BuildContext context) {
     final fontSize = MediaQuery.of(context).size.width * 0.025;
+    final isMobile = ResponsiveWidget.isMobile(context);
+
     final toolsTitle = [
       'buy_sell'.tr,
       'crypto_card'.tr,
@@ -91,8 +95,16 @@ class _ToolsScreenState extends State<ToolsScreen> {
                 height: 80,
                 child: GestureDetector(
                   onTap: () {
-                    toolsController
-                        .selectScreens(toolsController.screens[index]);
+                    isMobile
+                        ? Get.toNamed(
+                            RoutesName.showAllToolsScreenMobile,
+                            arguments: {
+                              'showAllToolsScreenMobile':
+                                  toolsController.screens[index]
+                            },
+                          )
+                        : toolsController
+                            .selectScreens(toolsController.screens[index]);
                   },
                   child: Card(
                     color: cardColors[index],

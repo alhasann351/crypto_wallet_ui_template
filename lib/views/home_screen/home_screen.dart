@@ -1,13 +1,12 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
 import 'package:crypto_wallet_ui_template/views/home_screen/home_screen_appbar/home_screen_appbar.dart';
 import 'package:crypto_wallet_ui_template/views/menu_screen/menu_screen.dart';
 import 'package:crypto_wallet_ui_template/views/swap_screen/swap_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/widgets/show_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../view_models/controllers/bottom_navbar_controller.dart';
-import '../../view_models/controllers/tools_controllers.dart';
 import '../tools_screen/tools_screen.dart';
 import '../tools_screen/widgets/tools_screen_appbar.dart';
 import 'bottom_navbar/bottom_navbar.dart';
@@ -20,7 +19,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final toolsController = Get.put(ToolsController());
   final bottomNavbarController = Get.put(BottomNavbarController());
 
   @override
@@ -133,53 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          Expanded(
+          const Expanded(
             flex: 3,
-            child: Obx(
-              () {
-                if (toolsController.selectedScreens.value == null) {
-                  final isTablet = ResponsiveWidget.isTablet(context);
-                  final isDesktop = ResponsiveWidget.isDesktop(context);
-                  final fontSize = MediaQuery.of(context).size.width * 0.025;
-
-                  return Column(
-                    spacing: 10,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/tools_image.webp',
-                        height: isTablet
-                            ? 200
-                            : isDesktop
-                                ? 220
-                                : 0,
-                        width: isTablet
-                            ? 200
-                            : isDesktop
-                                ? 220
-                                : 0,
-                      ),
-                      AutoSizeText(
-                        'no_selected_tools'.tr,
-                        textAlign: TextAlign.center,
-                        minFontSize: 16,
-                        maxFontSize: 20,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: fontSize,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'amaranth',
-                        ),
-                      ),
-                    ],
-                  );
-                }
-
-                final selectedScreens = toolsController.selectedScreens.value!;
-                return selectedScreens;
-              },
-            ),
+            child: ShowScreens(),
           ),
         ],
       );
@@ -196,53 +150,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          Expanded(
+          const Expanded(
             flex: 3,
-            child: Obx(
-              () {
-                if (toolsController.selectedScreens.value == null) {
-                  final isTablet = ResponsiveWidget.isTablet(context);
-                  final isDesktop = ResponsiveWidget.isDesktop(context);
-                  final fontSize = MediaQuery.of(context).size.width * 0.025;
-
-                  return Column(
-                    spacing: 10,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/tools_image.webp',
-                        height: isTablet
-                            ? 200
-                            : isDesktop
-                                ? 220
-                                : 0,
-                        width: isTablet
-                            ? 200
-                            : isDesktop
-                                ? 220
-                                : 0,
-                      ),
-                      AutoSizeText(
-                        'no_selected_tools'.tr,
-                        textAlign: TextAlign.center,
-                        minFontSize: 16,
-                        maxFontSize: 20,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: fontSize,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'amaranth',
-                        ),
-                      ),
-                    ],
-                  );
-                }
-
-                final selectedScreens = toolsController.selectedScreens.value!;
-                return selectedScreens;
-              },
-            ),
+            child: ShowScreens(),
           ),
           Expanded(
               flex: 2,

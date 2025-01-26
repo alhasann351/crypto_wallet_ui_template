@@ -1,8 +1,11 @@
 import 'package:crypto_wallet_ui_template/resources/components/back_button_design.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/buy_sell_history_icon.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/buy_sell_toggle_button.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/payout_account_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../responsive_widget.dart';
 import '../../../view_models/controllers/buy_sell_toggle_button_controller.dart';
 
 class BuySellScreen extends StatefulWidget {
@@ -17,6 +20,7 @@ class _BuySellScreenState extends State<BuySellScreen> {
   Widget build(BuildContext context) {
     final buySellToggleButtonController =
         Get.put(BuySellToggleButtonController());
+    final isMobile = ResponsiveWidget.isMobile(context);
 
     return Scaffold(
       body: SafeArea(
@@ -24,10 +28,23 @@ class _BuySellScreenState extends State<BuySellScreen> {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              const Row(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BackButtonDesign(),
-                  BuySellToggleButton(),
+                  isMobile ? const BackButtonDesign() : const SizedBox(),
+                  isMobile
+                      ? const SizedBox(
+                          width: 10,
+                        )
+                      : const SizedBox(),
+                  const BuySellToggleButton(),
+                  const Row(
+                    spacing: 10,
+                    children: [
+                      PayoutAccountIcon(),
+                      BuySellHistoryIcon(),
+                    ],
+                  ),
                 ],
               ),
               Obx(
