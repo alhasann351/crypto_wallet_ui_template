@@ -5,15 +5,10 @@ import 'package:crypto_wallet_ui_template/resources/themes/dark_theme.dart';
 import 'package:crypto_wallet_ui_template/resources/themes/light_theme.dart';
 import 'package:crypto_wallet_ui_template/view_models/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
-    runApp(MyApp());
-  });
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
