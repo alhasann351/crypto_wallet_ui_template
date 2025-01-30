@@ -4,4 +4,6 @@ class RoutesName {
   static const String homeScreen = '/home_screen';
   static const String showAllToolsScreenMobile =
       '/show_all_tools_screen_mobile';
+  static const String showAllCryptoCardApplyScreenMobileTablet =
+      '/show_all_crypto_card_apply_screen_mobile_tablet';
 }

@@ -67,6 +67,20 @@ class Languages extends Translations {
           'giveaway_title': 'Crypto Giveaway',
           'giveaway_des': 'Participate in events to win cryptocurrency rewards',
           'no_selected_tools': 'Please select any tools',
+          'card_details_1':
+              'Spend your cryptos directly with a Visa or Master card',
+          'card_details_2': 'Pay anywhere',
+          'card_details_3': 'Real-time approval',
+          'card_details_4': 'Top up as your spend',
+          'crypto_card_title_1': 'Basic Visa Card',
+          'crypto_card_title_2': 'Basic Master Card',
+          'crypto_card_title_3': 'Gold Visa Card',
+          'crypto_card_title_4': 'Gold Master Card',
+          'crypto_card_des_1': 'Spend your cryptos everyday',
+          'crypto_card_des_2': 'Seamlessly pay anywhere',
+          'crypto_card_des_3': 'Spend your cryptos everyday',
+          'crypto_card_des_4': 'Seamlessly pay anywhere',
+          'enjoy_tools_benefits': 'Enjoy tools benefits',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -142,6 +156,20 @@ class Languages extends Translations {
           'giveaway_title': 'ক্রিপ্টো গিভওয়ে',
           'giveaway_des': 'ক্রিপ্টো পুরষ্কার জিততে ইভেন্টগুলিতে অংশগ্রহণ করুন',
           'no_selected_tools': 'দয়া করে যেকোনো টুল নির্বাচন করুন',
+          'card_details_1':
+              'ভিসা বা মাস্টার কার্ড দিয়ে সরাসরি আপনার ক্রিপ্টো খরচ করুন',
+          'card_details_2': 'যেকোনো জায়গায় অর্থ প্রদান করুন',
+          'card_details_3': 'রিয়েল-টাইম অনুমোদন',
+          'card_details_4': 'আপনার খরচের পরিমাণ বাড়ান',
+          'crypto_card_title_1': 'বেসিক ভিসা কার্ড',
+          'crypto_card_title_2': 'বেসিক মাস্টার কার্ড',
+          'crypto_card_title_3': 'গোল্ড ভিসা কার্ড',
+          'crypto_card_title_4': 'গোল্ড মাস্টার কার্ড',
+          'crypto_card_des_1': 'প্রতিদিন আপনার ক্রিপ্টো খরচ করুন',
+          'crypto_card_des_2': 'যেকোনো জায়গায় নির্বিঘ্নে অর্থ প্রদান করুন',
+          'crypto_card_des_3': 'প্রতিদিন আপনার ক্রিপ্টো খরচ করুন',
+          'crypto_card_des_4': 'যেকোনো জায়গায় নির্বিঘ্নে অর্থ প্রদান করুন',
+          'enjoy_tools_benefits': 'টুল সুবিধা উপভোগ করুন',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -221,6 +249,20 @@ class Languages extends Translations {
           'giveaway_des':
               'क्रिप्टोकरेंसी पुरस्कार जीतने के लिए इवेंट में भाग लें',
           'no_selected_tools': 'कृपया कोई भी उपकरण चुनें',
+          'card_details_1':
+              'वीज़ा या मास्टर कार्ड से सीधे अपने क्रिप्टो खर्च करें',
+          'card_details_2': 'कहीं भी भुगतान करें',
+          'card_details_3': 'वास्तविक समय में स्वीकृति',
+          'card_details_4': 'अपने खर्च के अनुसार टॉप अप करें',
+          'crypto_card_title_1': 'बेसिक वीज़ा कार्ड',
+          'crypto_card_title_2': 'बेसिक मास्टर कार्ड',
+          'crypto_card_title_3': 'गोल्ड वीज़ा कार्ड',
+          'crypto_card_title_4': 'गोल्ड मास्टर कार्ड',
+          'crypto_card_des_1': 'हर दिन अपने क्रिप्टो खर्च करें',
+          'crypto_card_des_2': 'कहीं भी आसानी से भुगतान करें',
+          'crypto_card_des_3': 'हर दिन अपने क्रिप्टो खर्च करें',
+          'crypto_card_des_4': 'कहीं भी आसानी से भुगतान करें',
+          'enjoy_tools_benefits': 'टूल लाभों का आनंद लें',
 
           //menu screen
           'menu_screen_title': 'मेनू',

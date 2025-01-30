@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:crypto_wallet_ui_template/resources/routes/routes_name.dart';
+import 'package:crypto_wallet_ui_template/view_models/controllers/crypto_card_select_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,12 +17,13 @@ class ToolsScreen extends StatefulWidget {
 
 class _ToolsScreenState extends State<ToolsScreen> {
   final toolsController = Get.put(ToolsController());
+  final cryptoCardSelectController = Get.put(CryptoCardSelectController());
 
   @override
   Widget build(BuildContext context) {
     final fontSize = MediaQuery.of(context).size.width * 0.025;
     final isMobile = ResponsiveWidget.isMobile(context);
-
+    final isDesktop = ResponsiveWidget.isDesktop(context);
     final toolsTitle = [
       'buy_sell'.tr,
       'crypto_card'.tr,
@@ -67,6 +69,7 @@ class _ToolsScreenState extends State<ToolsScreen> {
       AppColors.cardColor2,
       AppColors.cardColor3,
     ];
+
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Column(
@@ -105,6 +108,9 @@ class _ToolsScreenState extends State<ToolsScreen> {
                           )
                         : toolsController
                             .selectScreens(toolsController.screens[index]);
+                    isDesktop
+                        ? cryptoCardSelectController.clearSelection()
+                        : const SizedBox();
                   },
                   child: Card(
                     color: cardColors[index],

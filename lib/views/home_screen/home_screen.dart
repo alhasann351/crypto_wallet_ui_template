@@ -1,7 +1,9 @@
 import 'package:crypto_wallet_ui_template/responsive_widget.dart';
+import 'package:crypto_wallet_ui_template/view_models/controllers/crypto_card_select_controller.dart';
 import 'package:crypto_wallet_ui_template/views/home_screen/home_screen_appbar/home_screen_appbar.dart';
 import 'package:crypto_wallet_ui_template/views/menu_screen/menu_screen.dart';
 import 'package:crypto_wallet_ui_template/views/swap_screen/swap_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/crypto_card_screen/widgets/crypto_card_apply_screen.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/widgets/show_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,6 +22,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final bottomNavbarController = Get.put(BottomNavbarController());
+  final cryptoCardSelectController = Get.put(CryptoCardSelectController());
 
   @override
   Widget build(BuildContext context) {
@@ -154,11 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 3,
             child: ShowScreens(),
           ),
-          Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.red,
-              )),
+          const Expanded(flex: 2, child: CryptoCardApplyScreen()),
         ],
       );
 
