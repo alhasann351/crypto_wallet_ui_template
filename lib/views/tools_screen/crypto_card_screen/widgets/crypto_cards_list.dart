@@ -16,7 +16,6 @@ class CryptoCardsList extends StatelessWidget {
     final cryptoCardSelectController = Get.put(CryptoCardSelectController());
     final isMobile = ResponsiveWidget.isMobile(context);
     final isTablet = ResponsiveWidget.isTablet(context);
-    final isDesktop = ResponsiveWidget.isDesktop(context);
     final cryptoCardTitle = [
       'crypto_card_title_1'.tr,
       'crypto_card_title_2'.tr,

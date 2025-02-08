@@ -32,11 +32,6 @@ class _BuySellScreenState extends State<BuySellScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   isMobile ? const BackButtonDesign() : const SizedBox(),
-                  isMobile
-                      ? const SizedBox(
-                          width: 10,
-                        )
-                      : const SizedBox(),
                   const BuySellToggleButton(),
                   const Row(
                     spacing: 10,

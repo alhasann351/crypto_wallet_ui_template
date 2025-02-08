@@ -1,6 +1,8 @@
 import 'package:crypto_wallet_ui_template/resources/routes/routes_name.dart';
 import 'package:crypto_wallet_ui_template/views/home_screen/home_screen.dart';
 import 'package:crypto_wallet_ui_template/views/onboarding_screen/onboarding_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/buy_sell_history_screen.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/payout_account_screen.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/crypto_card_screen/widgets/show_all_crypto_card_apply_screen_mobile_tablet.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/show_all_tools_screen_mobile/show_all_tools_screen_mobile.dart';
 import 'package:get/get.dart';
@@ -34,6 +36,18 @@ class AppRoutes {
         GetPage(
           name: RoutesName.showAllCryptoCardApplyScreenMobileTablet,
           page: () => const ShowAllCryptoCardApplyScreenMobileTablet(),
+          transition: Transition.zoom,
+          transitionDuration: const Duration(milliseconds: 800),
+        ),
+        GetPage(
+          name: RoutesName.payoutAccountScreen,
+          page: () => const PayoutAccountScreen(),
+          transition: Transition.zoom,
+          transitionDuration: const Duration(milliseconds: 800),
+        ),
+        GetPage(
+          name: RoutesName.buySellHistoryScreen,
+          page: () => const BuySellHistoryScreen(),
           transition: Transition.zoom,
           transitionDuration: const Duration(milliseconds: 800),
         ),

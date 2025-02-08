@@ -81,6 +81,11 @@ class Languages extends Translations {
           'crypto_card_des_3': 'Spend your cryptos everyday',
           'crypto_card_des_4': 'Seamlessly pay anywhere',
           'enjoy_tools_benefits': 'Enjoy tools benefits',
+          'buy_sell_history': 'Buy sell history',
+          'no_buy_sell_title': 'Nothing to see here',
+          'no_buy_sell_des':
+              'Buy/Sell orders will show up here once your account builds up relevant activities',
+          'all_status': 'All status',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -170,6 +175,11 @@ class Languages extends Translations {
           'crypto_card_des_3': 'প্রতিদিন আপনার ক্রিপ্টো খরচ করুন',
           'crypto_card_des_4': 'যেকোনো জায়গায় নির্বিঘ্নে অর্থ প্রদান করুন',
           'enjoy_tools_benefits': 'টুল সুবিধা উপভোগ করুন',
+          'buy_sell_history': 'ক্রয় বিক্রয়ের ইতিহাস',
+          'no_buy_sell_title': 'এখানে দেখার মতো কিছুই নেই',
+          'no_buy_sell_des':
+              'আপনার অ্যাকাউন্ট প্রাসঙ্গিক কার্যকলাপ তৈরি করলে ক্রয়/বিক্রয় অর্ডারগুলি এখানে প্রদর্শিত হবে',
+          'all_status': 'সকল স্ট্যাটাস',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -263,6 +273,11 @@ class Languages extends Translations {
           'crypto_card_des_3': 'हर दिन अपने क्रिप्टो खर्च करें',
           'crypto_card_des_4': 'कहीं भी आसानी से भुगतान करें',
           'enjoy_tools_benefits': 'टूल लाभों का आनंद लें',
+          'buy_sell_history': 'खरीदें-बेचें इतिहास',
+          'no_buy_sell_title': 'यहाँ देखने के लिए कुछ नहीं है',
+          'no_buy_sell_des':
+              'आपके खाते में प्रासंगिक गतिविधियाँ बनने के बाद खरीद/बिक्री के ऑर्डर यहाँ दिखाई देंगे',
+          'all_status': 'सभी स्थितियाँ',
 
           //menu screen
           'menu_screen_title': 'मेनू',

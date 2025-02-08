@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../view_models/controllers/bottom_navbar_controller.dart';
-import '../../view_models/controllers/buy_sell_history_payout_account_controller.dart';
+import '../../view_models/controllers/payout_account_buy_sell_history_controller.dart';
 import '../tools_screen/tools_screen.dart';
 import '../tools_screen/widgets/tools_screen_appbar.dart';
 import 'bottom_navbar/bottom_navbar.dart';
@@ -24,7 +24,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final bottomNavbarController = Get.put(BottomNavbarController());
   final cryptoCardSelectController = Get.put(CryptoCardSelectController());
-  final buySellHistoryPayoutAccountController =
+  final payoutAccountBuySellHistoryController =
       Get.put(PayoutAccountBuySellHistoryController());
 
   @override
@@ -164,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 2,
             child: cryptoCardSelectController.isScreenSelected.value
                 ? const CryptoCardApplyScreen()
-                : buySellHistoryPayoutAccountController.selectedScreen.value,
+                : payoutAccountBuySellHistoryController.selectedScreen.value,
           ),
         ],
       );

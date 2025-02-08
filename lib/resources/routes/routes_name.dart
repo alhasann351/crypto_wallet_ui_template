@@ -6,4 +6,6 @@ class RoutesName {
       '/show_all_tools_screen_mobile';
   static const String showAllCryptoCardApplyScreenMobileTablet =
       '/show_all_crypto_card_apply_screen_mobile_tablet';
+  static const String payoutAccountScreen = '/payout_account_screen';
+  static const String buySellHistoryScreen = '/buy_sell_history_screen';
 }
