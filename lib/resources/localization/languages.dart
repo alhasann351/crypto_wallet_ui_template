@@ -86,6 +86,19 @@ class Languages extends Translations {
           'no_buy_sell_des':
               'Buy/Sell orders will show up here once your account builds up relevant activities',
           'all_status': 'All status',
+          'payout_account': 'Payout Account',
+          'add_payout_account': 'Add payout account',
+          'receive_currency': 'Receive currency',
+          'select_option': 'Please select an option',
+          'select_currency': 'Select a currency',
+          'bank_name': 'Bank name',
+          'recipient_name': 'Recipient name',
+          'account_number': 'Account number',
+          'note': 'Note',
+          'save': 'Save',
+          'cancel': 'Cancel',
+          'all_accounts': 'All accounts',
+          'delete': 'Delete',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -180,6 +193,19 @@ class Languages extends Translations {
           'no_buy_sell_des':
               'আপনার অ্যাকাউন্ট প্রাসঙ্গিক কার্যকলাপ তৈরি করলে ক্রয়/বিক্রয় অর্ডারগুলি এখানে প্রদর্শিত হবে',
           'all_status': 'সকল স্ট্যাটাস',
+          'payout_account': 'পেআউট অ্যাকাউন্ট',
+          'add_payout_account': 'পেমেন্ট অ্যাকাউন্ট যোগ করুন',
+          'receive_currency': 'মুদ্রা গ্রহণ',
+          'select_option': 'একটি বিকল্প নির্বাচন করুন',
+          'select_currency': 'একটি মুদ্রা নির্বাচন করুন',
+          'bank_name': 'ব্যাংকের নাম',
+          'recipient_name': 'প্রাপকের নাম',
+          'account_number': 'অ্যাকাউন্ট নম্বর',
+          'note': 'নোট',
+          'save': 'সংরক্ষণ করুন',
+          'cancel': 'বাতিল করুন',
+          'all_accounts': 'সকল অ্যাকাউন্ট',
+          'delete': 'মুছে ফেলা',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -278,6 +304,19 @@ class Languages extends Translations {
           'no_buy_sell_des':
               'आपके खाते में प्रासंगिक गतिविधियाँ बनने के बाद खरीद/बिक्री के ऑर्डर यहाँ दिखाई देंगे',
           'all_status': 'सभी स्थितियाँ',
+          'payout_account': 'भुगतान खाता',
+          'add_payout_account': 'पेआउट खाता जोड़ें',
+          'receive_currency': 'मुद्रा प्राप्त करें',
+          'select_option': 'कोई विकल्प चुनें',
+          'select_currency': 'कोई मुद्रा चुनें',
+          'bank_name': 'बैंक का नाम',
+          'recipient_name': 'प्राप्तकर्ता का नाम',
+          'account_number': 'खाता संख्या',
+          'note': 'नोट',
+          'save': 'सहेजें',
+          'cancel': 'रद्द करें',
+          'all_accounts': 'सभी खाते',
+          'delete': 'हटाएँ',
 
           //menu screen
           'menu_screen_title': 'मेनू',

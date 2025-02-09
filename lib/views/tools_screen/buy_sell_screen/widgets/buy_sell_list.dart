@@ -109,6 +109,7 @@ class BuySellList extends StatelessWidget {
       itemCount: buySell.length,
       itemBuilder: (context, index) => SizedBox(
         child: Card(
+          color: AppColors.whiteColor,
           child: Padding(
             padding:
                 const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
@@ -128,6 +129,7 @@ class BuySellList extends StatelessWidget {
                       fontSize: fontSize,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'amaranth',
+                      color: AppColors.blackColor,
                     ),
                   ),
                 ),
@@ -143,6 +145,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(
@@ -173,6 +176,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(
@@ -203,6 +207,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(
@@ -233,6 +238,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(
@@ -263,6 +269,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(
@@ -293,6 +300,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(
@@ -323,6 +331,7 @@ class BuySellList extends StatelessWidget {
                         fontSize: fontSize,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'amaranth',
+                        color: AppColors.blackColor,
                       ),
                     ),
                     Expanded(

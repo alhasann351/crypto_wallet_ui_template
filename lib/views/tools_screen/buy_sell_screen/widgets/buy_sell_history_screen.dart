@@ -15,6 +15,7 @@ class BuySellHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isMobile = ResponsiveWidget.isMobile(context);
+    final isTablet = ResponsiveWidget.isTablet(context);
     final buySellAllStatusButtonController =
         Get.put(BuySellAllStatusButtonController());
 
@@ -23,8 +24,11 @@ class BuySellHistoryScreen extends StatelessWidget {
         child: Column(
           children: [
             CustomAppbar(
-                backButton:
-                    isMobile ? const BackButtonDesign() : const SizedBox(),
+                backButton: isMobile
+                    ? const BackButtonDesign()
+                    : isTablet
+                        ? const BackButtonDesign()
+                        : const SizedBox(),
                 title: 'buy_sell_history'.tr),
             isMobile
                 ? const SizedBox(
