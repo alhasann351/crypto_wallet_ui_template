@@ -3,6 +3,7 @@ import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
 class ReceiveCurrencyDropdownItemsController {
   var selectedItem = Rxn<ReceiveCurrencyDropdownItems>();
+  var selectedCurrency = 'USD'.obs;
   List<ReceiveCurrencyDropdownItems> items = [
     ReceiveCurrencyDropdownItems(text: "USD", image: "assets/images/usa.png"),
     ReceiveCurrencyDropdownItems(text: "EUR", image: "assets/images/euro.png"),

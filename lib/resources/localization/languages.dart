@@ -99,6 +99,10 @@ class Languages extends Translations {
           'cancel': 'Cancel',
           'all_accounts': 'All accounts',
           'delete': 'Delete',
+          'you_pay': 'You pay',
+          'enter_amount': 'Enter amount',
+          'you_receive': 'You receive',
+          'selling': 'Selling',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -206,6 +210,10 @@ class Languages extends Translations {
           'cancel': 'বাতিল করুন',
           'all_accounts': 'সকল অ্যাকাউন্ট',
           'delete': 'মুছে ফেলা',
+          'you_pay': 'অর্থ প্রদান',
+          'enter_amount': 'পরিমাণ লিখুন',
+          'you_receive': 'তুমি পাবে',
+          'selling': 'বিক্রয়',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -317,6 +325,10 @@ class Languages extends Translations {
           'cancel': 'रद्द करें',
           'all_accounts': 'सभी खाते',
           'delete': 'हटाएँ',
+          'you_pay': 'भुगतान करें',
+          'enter_amount': 'राशि दर्ज करें',
+          'you_receive': 'प्राप्त करें',
+          'selling': 'बेचना',
 
           //menu screen
           'menu_screen_title': 'मेनू',

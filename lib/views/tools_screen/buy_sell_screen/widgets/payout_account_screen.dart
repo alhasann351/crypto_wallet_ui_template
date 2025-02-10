@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../responsive_widget.dart';
+import '../../../../view_models/controllers/theme_controller.dart';
 
 class PayoutAccountScreen extends StatelessWidget {
   const PayoutAccountScreen({super.key});
@@ -17,6 +18,7 @@ class PayoutAccountScreen extends StatelessWidget {
     final isMobile = ResponsiveWidget.isMobile(context);
     final isTablet = ResponsiveWidget.isTablet(context);
     final fontSize = MediaQuery.of(context).size.width * 0.025;
+    final themeController = Get.put(ThemeController());
 
     return Scaffold(
       body: SafeArea(
@@ -56,10 +58,14 @@ class PayoutAccountScreen extends StatelessWidget {
           Get.dialog(const AddPayoutDialog());
         },
         shape: const CircleBorder(),
-        backgroundColor: AppColors.whiteColor,
-        child: const Icon(
+        backgroundColor: themeController.isDarkMode.value
+            ? AppColors.brightCornflowerBlueColor
+            : AppColors.whiteColor,
+        child: Icon(
           Icons.add_outlined,
-          color: AppColors.blackColor,
+          color: themeController.isDarkMode.value
+              ? AppColors.whiteColor
+              : AppColors.blackColor,
         ),
       ),
     );

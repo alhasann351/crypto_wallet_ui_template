@@ -11,8 +11,6 @@ class DarkTheme {
     appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.darkColor,
         surfaceTintColor: AppColors.darkColor),
-    cardTheme: const CardTheme(
-      color: AppColors.brightCornflowerBlueColor,
-    ),
+    cardTheme: const CardTheme(color: AppColors.brightCornflowerBlueColor),
   );
 }
