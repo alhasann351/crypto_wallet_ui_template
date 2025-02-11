@@ -1,6 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../resources/colors/app_colors.dart';
 import '../../../../resources/components/back_button_design.dart';
 import '../../../../resources/components/custom_appbar.dart';
 import '../../../../responsive_widget.dart';
@@ -11,6 +13,7 @@ class GoldVisaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isMobile = ResponsiveWidget.isMobile(context);
+    final fontSize = MediaQuery.of(context).size.width * 0.025;
 
     return SafeArea(
       child: Scaffold(
@@ -21,11 +24,69 @@ class GoldVisaCard extends StatelessWidget {
                   isMobile ? const BackButtonDesign() : const SizedBox(),
               title: 'crypto_card_title_3'.tr,
             ),
-            Expanded(
-              child: ListView(
-                shrinkWrap: true,
-                children: [],
-              ),
+            ListView(
+              shrinkWrap: true,
+              children: [
+                SizedBox(
+                  height: 150,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Card(
+                      elevation: 10,
+                      shadowColor: AppColors.cryptoCardColor,
+                      color: AppColors.cryptoCardColor,
+                      clipBehavior: Clip.antiAlias,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Stack(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Image.asset(
+                                  'assets/images/visa.webp',
+                                  fit: BoxFit.cover,
+                                  height: 50,
+                                  width: 50,
+                                ),
+                                Image.asset(
+                                  'assets/images/dollar.png',
+                                  fit: BoxFit.cover,
+                                  height: 35,
+                                  width: 35,
+                                ),
+                                Image.asset(
+                                  'assets/images/cryptocurrency.webp',
+                                  fit: BoxFit.cover,
+                                  height: 35,
+                                  width: 35,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 10),
+                            Align(
+                              alignment: Alignment.bottomRight,
+                              child: AutoSizeText(
+                                'Gold VISA Card',
+                                minFontSize: 16,
+                                maxFontSize: 18,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
+                                style: TextStyle(
+                                  fontSize: fontSize,
+                                  fontFamily: 'amaranth',
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.whiteColor,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
