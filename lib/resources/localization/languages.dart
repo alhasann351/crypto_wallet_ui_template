@@ -103,13 +103,13 @@ class Languages extends Translations {
           'enter_amount': 'Enter amount',
           'you_receive': 'You receive',
           'selling': 'Selling',
-          'activation_card': 'Activation card',
-          'activation_fee': 'Activation fee',
-          'initial_top_up': 'Initial top up',
+          'activation_card': 'Activation card & fees',
           'top_up_info_title': 'Minimum top-up amount',
           'top_up_info_content':
               'Minimum top-up required to activate your card, this will be charged together with the card activation fee. Your top-up will go to into your card balanced and immediately ready to use as soon as the card is active.',
           'ok': 'OK',
+          'native_currency': 'Native currency',
+          'apply_card': 'Apply card',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -221,13 +221,13 @@ class Languages extends Translations {
           'enter_amount': 'পরিমাণ লিখুন',
           'you_receive': 'তুমি পাবে',
           'selling': 'বিক্রয়',
-          'activation_card': 'অ্যাক্টিভেশন কার্ড',
-          'activation_fee': 'অ্যাক্টিভেশন ফি',
-          'initial_top_up': 'প্রাথমিক টপ আপ',
+          'activation_card': 'অ্যাক্টিভেশন কার্ড & ফি',
           'top_up_info_title': 'ন্যূনতম টপ-আপ পরিমাণ',
           'top_up_info_content':
               'আপনার কার্ড সক্রিয় করতে ন্যূনতম টপ-আপ প্রয়োজন, এটি কার্ড সক্রিয়করণ ফি সহ চার্জ করা হবে। আপনার টপ-আপ আপনার কার্ডে ব্যালেন্সড হয়ে যাবে এবং কার্ড সক্রিয় হওয়ার সাথে সাথে ব্যবহারের জন্য প্রস্তুত হবে।',
           'ok': 'ঠিক আছে',
+          'native_currency': 'দেশীয় মুদ্রা',
+          'apply card': 'আবেদন করুন',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -343,13 +343,13 @@ class Languages extends Translations {
           'enter_amount': 'राशि दर्ज करें',
           'you_receive': 'प्राप्त करें',
           'selling': 'बेचना',
-          'activation_card': 'सक्रियण कार्ड',
-          'activation_fee': 'सक्रियण शुल्क',
-          'initial_top_up': 'प्रारंभिक टॉप अप',
+          'activation_card': 'सक्रियण कार्ड & शुल्क',
           'top_up_info_title': 'न्यूनतम टॉप-अप राशि',
           'top_up_info_content':
               'आपके कार्ड को सक्रिय करने के लिए न्यूनतम टॉप-अप की आवश्यकता है, यह कार्ड सक्रियण शुल्क के साथ लिया जाएगा। आपका टॉप-अप आपके कार्ड बैलेंस में चला जाएगा और कार्ड सक्रिय होते ही तुरंत उपयोग के लिए तैयार हो जाएगा।',
           'ok': 'ठीक है',
+          'native_currency': 'मूल मुद्रा',
+          'कार्ड लागू करें': 'लागू करें',
 
           //menu screen
           'menu_screen_title': 'मेनू',

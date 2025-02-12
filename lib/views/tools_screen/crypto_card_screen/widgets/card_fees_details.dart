@@ -15,25 +15,74 @@ class CardFeesDetails extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
+          spacing: 15,
           children: [
-            Expanded(
-              child: _buildFeeItem(
-                icon:
-                    'assets/images/fees.png', // Replace with actual asset path
-                title: 'activation_fee'.tr,
-                amount: '10 USDT',
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: _buildFeeItem(
+                    icon:
+                        'assets/images/fees.png', // Replace with actual asset path
+                    title: 'Activation fee',
+                    amount: '10 USDT',
+                  ),
+                ),
+                Expanded(
+                  child: _buildFeeItem(
+                    icon:
+                        'assets/images/top_up.png', // Replace with actual asset path
+                    title: 'Initial top-up',
+                    amount: '5 USDT',
+                    showInfoIcon: true,
+                  ),
+                ),
+              ],
             ),
-            Expanded(
-              child: _buildFeeItem(
-                icon:
-                    'assets/images/top_up.png', // Replace with actual asset path
-                title: 'initial_top_up'.tr,
-                amount: '5 USDT',
-                showInfoIcon: true,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: _buildFeeItem(
+                    icon:
+                        'assets/images/top_up_fee.png', // Replace with actual asset path
+                    title: 'Top-up fee',
+                    amount: '1.8 %',
+                  ),
+                ),
+                Expanded(
+                  child: _buildFeeItem(
+                    icon:
+                        'assets/images/month_fee.png', // Replace with actual asset path
+                    title: 'Monthly fee',
+                    amount: 'FREE',
+                    showInfoIcon: false,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: _buildFeeItem(
+                    icon:
+                        'assets/images/transaction_fee.png', // Replace with actual asset path
+                    title: 'General txn fee',
+                    amount: '0 %',
+                  ),
+                ),
+                Expanded(
+                  child: _buildFeeItem(
+                    icon:
+                        'assets/images/foreign_fee.png', // Replace with actual asset path
+                    title: 'Foreign fee',
+                    amount: '1.5 %',
+                    showInfoIcon: false,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

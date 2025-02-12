@@ -16,10 +16,13 @@ class AppUtils {
           fontWeight: FontWeight.bold,
           fontSize: 20,
           color: AppColors.blackColor),
-      content: Text(
-        content,
-        style: const TextStyle(
-            fontFamily: 'amaranth', fontSize: 16, color: AppColors.greyColor),
+      content: SizedBox(
+        width: 300,
+        child: Text(
+          content,
+          style: const TextStyle(
+              fontFamily: 'amaranth', fontSize: 16, color: AppColors.greyColor),
+        ),
       ),
       contentPadding: const EdgeInsets.all(20),
       confirm: ElevatedButton(
