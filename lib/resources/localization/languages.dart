@@ -110,6 +110,10 @@ class Languages extends Translations {
           'ok': 'OK',
           'native_currency': 'Native currency',
           'apply_card': 'Apply card',
+          'easy_earning': 'Easy earning',
+          'start_earning': 'Start earning',
+          'faq': 'FAQ',
+          'faq_content': 'Enter your faq content here',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -228,6 +232,10 @@ class Languages extends Translations {
           'ok': 'ঠিক আছে',
           'native_currency': 'দেশীয় মুদ্রা',
           'apply card': 'আবেদন করুন',
+          'easy_earning': 'সহজে উপার্জন',
+          'start_earning': 'আয় শুরু করুন',
+          'faq': 'FAQ',
+          'faq_content': 'আপনার FAQ কন্টেন্ট এখানে লিখুন',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -350,6 +358,10 @@ class Languages extends Translations {
           'ok': 'ठीक है',
           'native_currency': 'मूल मुद्रा',
           'कार्ड लागू करें': 'लागू करें',
+          'easy_earning': 'সহজে উপার্জন',
+          'start_earning': 'कमाना शुरू करें',
+          'faq': 'FAQ',
+          'faq_content': 'अपनी faq सामग्री यहाँ दर्ज करें',
 
           //menu screen
           'menu_screen_title': 'मेनू',

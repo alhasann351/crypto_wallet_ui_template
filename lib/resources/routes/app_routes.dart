@@ -4,6 +4,7 @@ import 'package:crypto_wallet_ui_template/views/onboarding_screen/onboarding_scr
 import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/buy_sell_history_screen.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/widgets/payout_account_screen.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/crypto_card_screen/widgets/show_all_crypto_card_apply_screen_mobile_tablet.dart';
+import 'package:crypto_wallet_ui_template/views/tools_screen/easy_earning_screen/widgets/easy_earning_history_screen.dart';
 import 'package:crypto_wallet_ui_template/views/tools_screen/show_all_tools_screen_mobile/show_all_tools_screen_mobile.dart';
 import 'package:get/get.dart';
 
@@ -48,6 +49,12 @@ class AppRoutes {
         GetPage(
           name: RoutesName.buySellHistoryScreen,
           page: () => const BuySellHistoryScreen(),
+          transition: Transition.zoom,
+          transitionDuration: const Duration(milliseconds: 800),
+        ),
+        GetPage(
+          name: RoutesName.easyEarningHistoryScreen,
+          page: () => const EasyEarningHistoryScreen(),
           transition: Transition.zoom,
           transitionDuration: const Duration(milliseconds: 800),
         ),

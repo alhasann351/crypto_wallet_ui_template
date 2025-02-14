@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../view_models/controllers/bottom_navbar_controller.dart';
+import '../../view_models/controllers/easy_earning_history controller.dart';
 import '../../view_models/controllers/payout_account_buy_sell_history_controller.dart';
 import '../tools_screen/tools_screen.dart';
 import '../tools_screen/widgets/tools_screen_appbar.dart';
@@ -26,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final cryptoCardSelectController = Get.put(CryptoCardSelectController());
   final payoutAccountBuySellHistoryController =
       Get.put(PayoutAccountBuySellHistoryController());
+  final easyEarningHistoryController = Get.put(EasyEarningHistoryController());
 
   @override
   Widget build(BuildContext context) {
@@ -161,11 +163,10 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ShowScreens(),
           ),
           Expanded(
-            flex: 2,
-            child: cryptoCardSelectController.isScreenSelected.value
-                ? const CryptoCardApplyScreen()
-                : payoutAccountBuySellHistoryController.selectedScreen.value,
-          ),
+              flex: 2,
+              child: cryptoCardSelectController.isScreenSelected.value
+                  ? const CryptoCardApplyScreen()
+                  : payoutAccountBuySellHistoryController.selectedScreen.value),
         ],
       );
 

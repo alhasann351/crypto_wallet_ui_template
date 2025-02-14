@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import '../../../resources/colors/app_colors.dart';
 import '../../../view_models/controllers/tools_controllers.dart';
 import '../../responsive_widget.dart';
+import '../../view_models/controllers/easy_earning_history controller.dart';
 import '../../view_models/controllers/payout_account_buy_sell_history_controller.dart';
 
 class ToolsScreen extends StatefulWidget {
@@ -21,6 +22,7 @@ class _ToolsScreenState extends State<ToolsScreen> {
   final cryptoCardSelectController = Get.put(CryptoCardSelectController());
   final payoutAccountBuySellHistoryController =
       Get.put(PayoutAccountBuySellHistoryController());
+  final easyEarningHistoryController = Get.put(EasyEarningHistoryController());
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +118,9 @@ class _ToolsScreenState extends State<ToolsScreen> {
                         : const SizedBox();
                     isDesktop
                         ? payoutAccountBuySellHistoryController.resetToDefault()
+                        : const SizedBox();
+                    isDesktop
+                        ? easyEarningHistoryController.resetToDefault()
                         : const SizedBox();
                   },
                   child: Card(
