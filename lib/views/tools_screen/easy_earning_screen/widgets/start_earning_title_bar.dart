@@ -4,9 +4,7 @@ import 'package:get/get.dart';
 
 import '../../../../resources/colors/app_colors.dart';
 import '../../../../resources/routes/routes_name.dart';
-import '../../../../responsive_widget.dart';
 import '../../../../utils/app_utils.dart';
-import '../../../../view_models/controllers/easy_earning_history controller.dart';
 import '../../../../view_models/controllers/theme_controller.dart';
 
 class StartEarningTitleBar extends StatelessWidget {
@@ -16,10 +14,6 @@ class StartEarningTitleBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final fontSize = MediaQuery.of(context).size.width * 0.025;
     final themeController = Get.put(ThemeController());
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
-    final easyEarningHistoryController =
-        Get.put(EasyEarningHistoryController());
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,11 +51,7 @@ class StartEarningTitleBar extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                if (isMobile || isTablet) {
-                  Get.toNamed(RoutesName.easyEarningHistoryScreen);
-                } else {
-                  easyEarningHistoryController.showEasyEarningHistoryScreen();
-                }
+                Get.toNamed(RoutesName.easyEarningHistoryScreen);
               },
               child: CircleAvatar(
                 backgroundColor: themeController.isDarkMode.value

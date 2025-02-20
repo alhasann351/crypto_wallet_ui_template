@@ -4,23 +4,18 @@ import 'package:get/get.dart';
 
 import '../../../resources/components/back_button_design.dart';
 import '../../../resources/components/custom_appbar.dart';
-import '../../../responsive_widget.dart';
 
 class EasyEarningScreen extends StatelessWidget {
   const EasyEarningScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
-
     return SafeArea(
       child: Scaffold(
         body: Column(
           children: [
             CustomAppbar(
-                backButton:
-                    isMobile ? const BackButtonDesign() : const SizedBox(),
-                title: 'easy_earning'.tr),
+                backButton: const BackButtonDesign(), title: 'easy_earning'.tr),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(10),

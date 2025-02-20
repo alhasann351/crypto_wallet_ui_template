@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../../resources/colors/app_colors.dart';
-import '../../../responsive_widget.dart';
 import '../../../view_models/controllers/bottom_navbar_controller.dart';
 import '../../../view_models/controllers/theme_controller.dart';
 
@@ -14,9 +13,6 @@ class BottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeController = Get.put(ThemeController());
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
-    final isDesktop = ResponsiveWidget.isDesktop(context);
     final bottomNavbarController = Get.put(BottomNavbarController());
 
     return PopScope(
@@ -49,61 +45,37 @@ class BottomNavbar extends StatelessWidget {
               GButton(
                 icon: Icons.home_outlined,
                 text: 'nav_home'.tr,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontFamily: 'amaranth',
-                  fontSize: isMobile
-                      ? 14
-                      : isTablet
-                          ? 16
-                          : isDesktop
-                              ? 17
-                              : 14,
+                  fontSize: 14,
                 ),
               ),
               GButton(
                 icon: Icons.swipe_down_outlined,
                 text: 'nav_swap'.tr,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontFamily: 'amaranth',
-                  fontSize: isMobile
-                      ? 14
-                      : isTablet
-                          ? 16
-                          : isDesktop
-                              ? 17
-                              : 14,
+                  fontSize: 14,
                 ),
               ),
               GButton(
                 icon: Icons.build_outlined,
                 text: 'nav_tools'.tr,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontFamily: 'amaranth',
-                  fontSize: isMobile
-                      ? 14
-                      : isTablet
-                          ? 16
-                          : isDesktop
-                              ? 17
-                              : 14,
+                  fontSize: 14,
                 ),
               ),
               GButton(
                 icon: Icons.person_outline,
                 text: 'nav_menu'.tr,
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontFamily: 'amaranth',
-                  fontSize: isMobile
-                      ? 14
-                      : isTablet
-                          ? 16
-                          : isDesktop
-                              ? 17
-                              : 14,
+                  fontSize: 14,
                 ),
               ),
             ],

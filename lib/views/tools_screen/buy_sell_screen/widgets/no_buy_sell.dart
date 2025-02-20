@@ -2,16 +2,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../responsive_widget.dart';
-
 class NoBuySell extends StatelessWidget {
   const NoBuySell({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
-    final isDesktop = ResponsiveWidget.isDesktop(context);
     final fontSize = MediaQuery.of(context).size.width * 0.025;
 
     return Padding(
@@ -22,20 +17,8 @@ class NoBuySell extends StatelessWidget {
         children: [
           Image.asset(
             'assets/images/box.png',
-            height: isMobile
-                ? 100
-                : isTablet
-                    ? 150
-                    : isDesktop
-                        ? 150
-                        : 0,
-            width: isMobile
-                ? 100
-                : isTablet
-                    ? 150
-                    : isDesktop
-                        ? 150
-                        : 0,
+            height: 100,
+            width: 100,
           ),
           const SizedBox(
             height: 10,

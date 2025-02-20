@@ -7,7 +7,6 @@ import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/wid
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../responsive_widget.dart';
 import '../../../view_models/controllers/buy_sell_toggle_button_controller.dart';
 
 class BuySellScreen extends StatefulWidget {
@@ -22,7 +21,6 @@ class _BuySellScreenState extends State<BuySellScreen> {
   Widget build(BuildContext context) {
     final buySellToggleButtonController =
         Get.put(BuySellToggleButtonController());
-    final isMobile = ResponsiveWidget.isMobile(context);
 
     return Scaffold(
       body: SafeArea(
@@ -30,12 +28,12 @@ class _BuySellScreenState extends State<BuySellScreen> {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  isMobile ? const BackButtonDesign() : const SizedBox(),
-                  const BuySellToggleButton(),
-                  const Row(
+                  BackButtonDesign(),
+                  BuySellToggleButton(),
+                  Row(
                     spacing: 10,
                     children: [
                       PayoutAccountIcon(),

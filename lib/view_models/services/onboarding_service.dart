@@ -13,7 +13,7 @@ class OnboardingService {
         await onboardingPageController.isOnboardingScreenCompleted();
     if (isOnboardingScreenCompleted) {
       Timer(const Duration(seconds: 4),
-          () => Get.offAllNamed(RoutesName.homeScreen));
+          () => Get.offAllNamed(RoutesName.mainScreensShow));
     } else {
       Timer(const Duration(seconds: 4),
           () => Get.offAllNamed(RoutesName.onboardingScreen));

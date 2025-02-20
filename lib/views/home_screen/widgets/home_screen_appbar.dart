@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../resources/colors/app_colors.dart';
 import '../../../view_models/controllers/theme_controller.dart';
 
 class HomeScreenAppbar extends StatelessWidget {
@@ -27,16 +28,36 @@ class HomeScreenAppbar extends StatelessWidget {
           ),
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.qr_code_scanner_rounded,
+          Obx(
+            () => IconButton(
+              onPressed: () {},
+              icon: CircleAvatar(
+                backgroundColor: themeController.isDarkMode.value
+                    ? AppColors.brightCornflowerBlueColor
+                    : AppColors.whiteColor,
+                child: Icon(
+                  Icons.qr_code_scanner_rounded,
+                  color: themeController.isDarkMode.value
+                      ? AppColors.whiteColor
+                      : AppColors.blackColor,
+                ),
+              ),
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications_active_outlined,
+          Obx(
+            () => IconButton(
+              onPressed: () {},
+              icon: CircleAvatar(
+                backgroundColor: themeController.isDarkMode.value
+                    ? AppColors.brightCornflowerBlueColor
+                    : AppColors.whiteColor,
+                child: Icon(
+                  Icons.notifications_active_outlined,
+                  color: themeController.isDarkMode.value
+                      ? AppColors.whiteColor
+                      : AppColors.blackColor,
+                ),
+              ),
             ),
           ),
           Obx(

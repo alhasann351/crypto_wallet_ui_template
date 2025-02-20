@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import '../../../../resources/components/back_button_design.dart';
 import '../../../../resources/components/custom_appbar.dart';
-import '../../../../responsive_widget.dart';
 import '../../../../view_models/controllers/buy_sell_all_status_button_controller.dart';
 
 class BuySellHistoryScreen extends StatelessWidget {
@@ -14,8 +13,6 @@ class BuySellHistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
     final buySellAllStatusButtonController =
         Get.put(BuySellAllStatusButtonController());
 
@@ -24,17 +21,11 @@ class BuySellHistoryScreen extends StatelessWidget {
         child: Column(
           children: [
             CustomAppbar(
-                backButton: isMobile
-                    ? const BackButtonDesign()
-                    : isTablet
-                        ? const BackButtonDesign()
-                        : const SizedBox(),
+                backButton: const BackButtonDesign(),
                 title: 'buy_sell_history'.tr),
-            isMobile
-                ? const SizedBox(
-                    width: 10,
-                  )
-                : const SizedBox(),
+            const SizedBox(
+              width: 10,
+            ),
             const BuySellAllStatusToggleButton(),
             Expanded(
               child: Padding(

@@ -114,6 +114,8 @@ class Languages extends Translations {
           'start_earning': 'Start earning',
           'faq': 'FAQ',
           'faq_content': 'Enter your faq content here',
+          'active_success_title': 'Success',
+          'active_success_content': 'Your card has been activated successfully',
 
           //menu screen
           'menu_screen_title': 'Menu',
@@ -236,6 +238,8 @@ class Languages extends Translations {
           'start_earning': 'আয় শুরু করুন',
           'faq': 'FAQ',
           'faq_content': 'আপনার FAQ কন্টেন্ট এখানে লিখুন',
+          'active_success_title': 'সফল',
+          'active_success_content': 'আপনার কার্ড সফলভাবে সক্রিয় করা হয়েছে',
 
           //menu screen
           'menu_screen_title': 'মেনু',
@@ -362,6 +366,8 @@ class Languages extends Translations {
           'start_earning': 'कमाना शुरू करें',
           'faq': 'FAQ',
           'faq_content': 'अपनी faq सामग्री यहाँ दर्ज करें',
+          'active_success_title': 'सफल',
+          'active_success_content': 'आपका कार्ड सफलतापूर्वक सक्रिय हो गया है',
 
           //menu screen
           'menu_screen_title': 'मेनू',

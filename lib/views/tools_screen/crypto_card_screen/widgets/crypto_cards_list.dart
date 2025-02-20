@@ -4,8 +4,10 @@ import 'package:get/get.dart';
 
 import '../../../../resources/colors/app_colors.dart';
 import '../../../../resources/routes/routes_name.dart';
-import '../../../../responsive_widget.dart';
-import '../../../../view_models/controllers/crypto_card_select_controller.dart';
+import 'basic_master_card.dart';
+import 'basic_visa_card.dart';
+import 'gold_master_card.dart';
+import 'gold_visa_card.dart';
 
 class CryptoCardsList extends StatelessWidget {
   const CryptoCardsList({super.key});
@@ -13,9 +15,6 @@ class CryptoCardsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final fontSize = MediaQuery.of(context).size.width * 0.025;
-    final cryptoCardSelectController = Get.put(CryptoCardSelectController());
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
     final cryptoCardTitle = [
       'crypto_card_title_1'.tr,
       'crypto_card_title_2'.tr,
@@ -29,6 +28,13 @@ class CryptoCardsList extends StatelessWidget {
       'crypto_card_des_4'.tr,
     ];
 
+    final cardsScreens = [
+      const BasicVisaCard(),
+      const BasicMasterCard(),
+      const GoldVisaCard(),
+      const GoldMasterCard(),
+    ];
+
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -40,18 +46,10 @@ class CryptoCardsList extends StatelessWidget {
             height: 80,
             child: GestureDetector(
               onTap: () {
-                if (isMobile || isTablet) {
-                  Get.toNamed(
-                    RoutesName.showAllCryptoCardApplyScreenMobileTablet,
-                    arguments: {
-                      'showAllCryptoCardApplyScreenMobileTablet':
-                          cryptoCardSelectController.screens[index]
-                    },
-                  );
-                } else {
-                  cryptoCardSelectController
-                      .selectScreens(cryptoCardSelectController.screens[index]);
-                }
+                Get.toNamed(
+                  RoutesName.allCryptoCardApplyScreen,
+                  arguments: {'allCryptoCardApplyScreen': cardsScreens[index]},
+                );
               },
               child: Card(
                 color: AppColors.whiteColor,

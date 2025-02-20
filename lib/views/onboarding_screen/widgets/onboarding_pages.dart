@@ -53,7 +53,7 @@ class OnboardingPages extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.offAllNamed(RoutesName.homeScreen);
+                      Get.offAllNamed(RoutesName.mainScreensShow);
                       onboardingPageController.completeOnboardingScreen();
                     },
                     child: AutoSizeText(

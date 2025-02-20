@@ -7,7 +7,6 @@ import 'package:crypto_wallet_ui_template/views/tools_screen/buy_sell_screen/wid
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../responsive_widget.dart';
 import '../../../../view_models/controllers/theme_controller.dart';
 
 class PayoutAccountScreen extends StatelessWidget {
@@ -15,8 +14,6 @@ class PayoutAccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
     final fontSize = MediaQuery.of(context).size.width * 0.025;
     final themeController = Get.put(ThemeController());
 
@@ -25,11 +22,7 @@ class PayoutAccountScreen extends StatelessWidget {
         child: Column(
           children: [
             CustomAppbar(
-                backButton: isMobile
-                    ? const BackButtonDesign()
-                    : isTablet
-                        ? const BackButtonDesign()
-                        : const SizedBox(),
+                backButton: const BackButtonDesign(),
                 title: 'payout_account'.tr),
             Padding(
               padding: const EdgeInsets.all(10),

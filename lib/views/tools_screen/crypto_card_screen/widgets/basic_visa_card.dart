@@ -7,7 +7,6 @@ import 'package:crypto_wallet_ui_template/views/tools_screen/crypto_card_screen/
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../responsive_widget.dart';
 import 'native_currency_card.dart';
 
 class BasicVisaCard extends StatelessWidget {
@@ -15,7 +14,6 @@ class BasicVisaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
     final fontSize = MediaQuery.of(context).size.width * 0.025;
 
     return SafeArea(
@@ -23,8 +21,7 @@ class BasicVisaCard extends StatelessWidget {
         body: Column(
           children: [
             CustomAppbar(
-              backButton:
-                  isMobile ? const BackButtonDesign() : const SizedBox(),
+              backButton: const BackButtonDesign(),
               title: 'crypto_card_title_1'.tr,
             ),
             Expanded(

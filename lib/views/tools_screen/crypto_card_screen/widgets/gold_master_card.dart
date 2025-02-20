@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import '../../../../resources/colors/app_colors.dart';
 import '../../../../resources/components/back_button_design.dart';
 import '../../../../resources/components/custom_appbar.dart';
-import '../../../../responsive_widget.dart';
 import 'apply_crypto_card_button.dart';
 import 'card_fees_details.dart';
 import 'native_currency_card.dart';
@@ -15,7 +14,6 @@ class GoldMasterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
     final fontSize = MediaQuery.of(context).size.width * 0.025;
 
     return SafeArea(
@@ -23,8 +21,7 @@ class GoldMasterCard extends StatelessWidget {
         body: Column(
           children: [
             CustomAppbar(
-              backButton:
-                  isMobile ? const BackButtonDesign() : const SizedBox(),
+              backButton: const BackButtonDesign(),
               title: 'crypto_card_title_4'.tr,
             ),
             Expanded(

@@ -2,16 +2,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../responsive_widget.dart';
-
 class OnboardingPageOne extends StatelessWidget {
   const OnboardingPageOne({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = ResponsiveWidget.isMobile(context);
-    final isTablet = ResponsiveWidget.isTablet(context);
-    final isDesktop = ResponsiveWidget.isDesktop(context);
     final fontSize = MediaQuery.of(context).size.width * 0.025;
 
     return Padding(
@@ -22,20 +17,8 @@ class OnboardingPageOne extends StatelessWidget {
         children: [
           Image.asset(
             'assets/images/onboarding_image_one.webp',
-            height: isMobile
-                ? 220
-                : isTablet
-                    ? 250
-                    : isDesktop
-                        ? 270
-                        : 0,
-            width: isMobile
-                ? 220
-                : isTablet
-                    ? 240
-                    : isDesktop
-                        ? 260
-                        : 0,
+            height: 220,
+            width: 220,
           ),
           const SizedBox(
             height: 30,

@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:crypto_wallet_ui_template/resources/colors/app_colors.dart';
+import 'package:crypto_wallet_ui_template/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -59,7 +60,10 @@ class ApplyCryptoCardButton extends StatelessWidget {
                 ],
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  AppUtils().showDialog(
+                      'active_success_title'.tr, 'active_success_content'.tr);
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: themeController.isDarkMode.value
                         ? AppColors.brightCornflowerBlueColor

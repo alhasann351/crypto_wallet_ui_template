@@ -1,4 +1,3 @@
-import 'package:crypto_wallet_ui_template/responsive_widget.dart';
 import 'package:crypto_wallet_ui_template/views/splash_screen/widgets/splash_screen_design.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,10 +26,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsiveWidget(
-      mobile: SplashScreenDesign(),
-      tablet: SplashScreenDesign(),
-      desktop: SplashScreenDesign(),
-    );
+    return const SplashScreenDesign();
   }
 }
