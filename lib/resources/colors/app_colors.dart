@@ -15,4 +15,5 @@ class AppColors {
   static const Color lightColor = Color(0xFFd2fae7);
   static const Color darkColor = Color(0xFF272652);
   static const Color cryptoCardColor = Color(0xFF16C47F);
+  static const Color textGreenColor = Color(0xFF16C47F);
 }

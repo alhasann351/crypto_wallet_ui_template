@@ -4,6 +4,7 @@ import 'package:crypto_wallet_ui_template/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../resources/components/custom_round_button.dart';
 import '../../../../view_models/controllers/theme_controller.dart';
 
 class ApplyCryptoCardButton extends StatelessWidget {
@@ -59,30 +60,22 @@ class ApplyCryptoCardButton extends StatelessWidget {
                   ),
                 ],
               ),
-              ElevatedButton(
-                onPressed: () {
-                  AppUtils().showDialog(
-                      'active_success_title'.tr, 'active_success_content'.tr);
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: themeController.isDarkMode.value
-                        ? AppColors.brightCornflowerBlueColor
-                        : AppColors.cryptoCardColor),
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: AutoSizeText(
-                    'apply_card'.tr,
-                    minFontSize: 16,
-                    maxFontSize: 18,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontSize: fontSize,
-                      fontFamily: 'amaranth',
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.whiteColor,
-                    ),
+              SizedBox(
+                width: 200,
+                child: CustomRoundButton(
+                  buttonName: 'apply_card'.tr,
+                  backgroundColor: themeController.isDarkMode.value
+                      ? AppColors.brightCornflowerBlueColor
+                      : AppColors.cryptoCardColor,
+                  textStyle: const TextStyle(
+                    color: AppColors.whiteColor,
+                    fontFamily: 'amaranth',
+                    fontWeight: FontWeight.bold,
                   ),
+                  voidCallback: () {
+                    AppUtils().showDialog(
+                        'active_success_title'.tr, 'active_success_content'.tr);
+                  },
                 ),
               ),
             ],
